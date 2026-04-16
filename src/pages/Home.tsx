@@ -54,11 +54,9 @@ function HeroSection() {
               </span>
             </div>
 
-            <h1 className="text-5xl font-bold leading-[1.1] text-stone-900 md:text-6xl xl:text-7xl">
+            <h1 className="bg-gradient-to-l from-amber-700 via-amber-600 to-amber-500 bg-clip-text text-5xl font-bold leading-[1.1] text-transparent md:text-6xl xl:text-7xl">
               להחזיר את הגוף לאיזון —{' '}
-              <span className="bg-gradient-to-l from-amber-700 via-amber-600 to-amber-500 bg-clip-text text-transparent">
-                ולהרגיש טוב יותר ביומיום
-              </span>
+              ולהרגיש טוב יותר ביומיום
             </h1>
 
             <p className="mx-auto mt-6 max-w-lg text-xl font-light leading-relaxed text-stone-600 lg:mx-0">
