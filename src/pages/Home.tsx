@@ -435,7 +435,7 @@ const articlePreviews = [
     title: 'כאב ותנועה',
     desc: 'כאב גב, צוואר, כתפיים ופרקים — הבנת השורש וטיפול קלאסי שמחזיר את התנועה',
     href: 'articles/article-back-pain.html',
-    image: '/images/topics/back-pain.jpg',
+    image: '/images/topics/01-back-pain.jpg',
   },
   {
     icon: '🌙',
@@ -444,7 +444,7 @@ const articlePreviews = [
     title: 'שינה וסטרס',
     desc: 'מתח כרוני, חרדה והפרעות שינה — כיצד רפואה סינית מחזירה את האיזון למערכת העצבים',
     href: 'articles/article-sleep.html',
-    image: '/images/topics/stress.jpg',
+    image: '/images/topics/02-stress.jpg',
   },
   {
     icon: '🌿',
@@ -453,7 +453,7 @@ const articlePreviews = [
     title: 'עיכול וחיסון',
     desc: 'מעי רגיש, נפיחות, ריפלוקס ומחסות חלושה — הגישה הסינית לחיזוק הגוף מבפנים',
     href: 'articles/article-allergies.html',
-    image: '/images/topics/sleep.jpg',
+    image: '/images/topics/03-sleep.jpg',
   },
   {
     icon: '🌸',
@@ -462,7 +462,7 @@ const articlePreviews = [
     title: 'פריון ואישה',
     desc: 'תמיכה בפריון, איזון מחזור, גיל המעבר ובריאות הורמונלית לאורך כל שלבי החיים',
     href: 'articles/article-fertility.html',
-    image: '/images/topics/hormones.jpg',
+    image: '/images/topics/06-hormones.jpg',
   },
   {
     icon: '🧒',
@@ -471,7 +471,7 @@ const articlePreviews = [
     title: 'ילדים ועצבים',
     desc: 'טיפול עדין לילדים — קשיי שינה, כאבי בטן, חרדות ובעיות מערכת עצבים',
     href: 'articles/article-stress.html',
-    image: '/images/topics/checkup.jpg',
+    image: '/images/topics/05-checkup.jpg',
   },
   {
     icon: '✨',
@@ -480,7 +480,7 @@ const articlePreviews = [
     title: 'עור ופנים',
     desc: 'אקנה, אקזמה, פסוריאזיס ועור יבש — הקשר בין עור לאיזון פנימי בראייה הסינית',
     href: 'articles/article-sweating.html',
-    image: '/images/topics/fatigue.jpg',
+    image: '/images/topics/04-fatigue.jpg',
   },
 ]
 
