@@ -108,31 +108,7 @@ function HeroSection() {
   )
 }
 
-/* ══════════════════════════════════════════════════════════════
-   2. TRUST BAR
-══════════════════════════════════════════════════════════════ */
-function TrustBar() {
-  const items = [
-    { num: '35+',    label: 'שנות ניסיון קליני' },
-    { num: 'אלפי',  label: 'מטופלים' },
-    { num: 'מייסד', label: 'האגודה לרפואה סינית בישראל' },
-    { num: 'מרצה',  label: 'באוניברסיטה העברית' },
-  ]
-  return (
-    <div className="border-y border-stone-200/60 bg-white py-10">
-      <div className="mx-auto max-w-5xl px-6">
-        <ul className="grid grid-cols-2 gap-y-8 text-center md:grid-cols-4">
-          {items.map((item) => (
-            <li key={item.num} className="flex flex-col items-center gap-1.5">
-              <span className="font-['Frank_Ruhl_Libre'] text-3xl font-bold text-amber-700">{item.num}</span>
-              <span className="text-xs text-stone-500 leading-snug max-w-[100px]">{item.label}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  )
-}
+
 
 /* ══════════════════════════════════════════════════════════════
    3. TREATMENTS / למי זה מתאים?
@@ -725,7 +701,6 @@ export default function Home() {
       <Header page="home" />
       <main>
         <HeroSection />
-        <TrustBar />
         <TreatmentsSection />
         <ProcessSection />
         <AboutSection />
