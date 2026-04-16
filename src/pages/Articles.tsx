@@ -89,8 +89,8 @@ export default function Articles() {
                     />
                   </div>
                   {/* Card body */}
-                  <div className="flex flex-1 flex-col items-center p-6 text-center">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 border border-amber-100 text-2xl -mt-9 shadow-sm">
+                  <div className="flex flex-1 flex-col items-center px-6 pb-6 pt-5 text-center">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 border border-amber-100 text-2xl shadow-sm">
                       {p.icon}
                     </div>
                     <h2 className="mt-3 text-lg font-bold text-foreground">
