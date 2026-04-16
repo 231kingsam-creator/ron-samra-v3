@@ -435,6 +435,7 @@ const articlePreviews = [
     title: 'כאב ותנועה',
     desc: 'כאב גב, צוואר, כתפיים ופרקים — הבנת השורש וטיפול קלאסי שמחזיר את התנועה',
     href: 'articles/article-back-pain.html',
+    image: '/images/article/article-headache.png',
   },
   {
     icon: '🌙',
@@ -443,6 +444,7 @@ const articlePreviews = [
     title: 'שינה וסטרס',
     desc: 'מתח כרוני, חרדה והפרעות שינה — כיצד רפואה סינית מחזירה את האיזון למערכת העצבים',
     href: 'articles/article-sleep.html',
+    image: '/images/article/article-sleep.png',
   },
   {
     icon: '🌿',
@@ -451,6 +453,7 @@ const articlePreviews = [
     title: 'עיכול וחיסון',
     desc: 'מעי רגיש, נפיחות, ריפלוקס ומחסות חלושה — הגישה הסינית לחיזוק הגוף מבפנים',
     href: 'articles/article-allergies.html',
+    image: '/images/article/article-allergies.png',
   },
   {
     icon: '🌸',
@@ -459,6 +462,7 @@ const articlePreviews = [
     title: 'פריון ואישה',
     desc: 'תמיכה בפריון, איזון מחזור, גיל המעבר ובריאות הורמונלית לאורך כל שלבי החיים',
     href: 'articles/article-fertility.html',
+    image: '/images/article/article-fertility.png',
   },
   {
     icon: '🧒',
@@ -467,6 +471,7 @@ const articlePreviews = [
     title: 'ילדים ועצבים',
     desc: 'טיפול עדין לילדים — קשיי שינה, כאבי בטן, חרדות ובעיות מערכת עצבים',
     href: 'articles/article-stress.html',
+    image: '/images/article/article-gynecology.png',
   },
   {
     icon: '✨',
@@ -475,6 +480,7 @@ const articlePreviews = [
     title: 'עור ופנים',
     desc: 'אקנה, אקזמה, פסוריאזיס ועור יבש — הקשר בין עור לאיזון פנימי בראייה הסינית',
     href: 'articles/article-sweating.html',
+    image: '/images/article/article-sweating.png',
   },
 ]
 
@@ -505,6 +511,14 @@ function ArticlesPreviewSection() {
                 href={p.href}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:border-amber-300 hover:shadow-md"
               >
+                {/* Cover image */}
+                <div className="relative h-44 w-full overflow-hidden bg-amber-50">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
                 {/* Card body */}
                 <div className="flex flex-1 flex-col items-center px-6 pb-6 pt-5 text-center">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 border border-amber-100 text-2xl shadow-sm">
@@ -516,10 +530,10 @@ function ArticlesPreviewSection() {
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
                     {p.desc}
                   </p>
-                  <a href={p.href} className="mt-5 flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-800 transition-colors">
+                  <span className="mt-5 flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-800 transition-colors">
                     <span>לקריאה</span>
                     <span className="transition-transform group-hover:-translate-x-0.5">←</span>
-                  </a>
+                  </span>
                 </div>
               </a>
             </motion.li>
