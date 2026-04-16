@@ -186,73 +186,6 @@ function TreatmentsSection() {
   )
 }
 
-/* ══════════════════════════════════════════════════════════════
-   4. PROCESS / איך זה עובד?
-══════════════════════════════════════════════════════════════ */
-const processSteps = [
-  { num: '01', title: 'אבחון אישי ומדויק',            sub: 'Personal Diagnosis',    desc: 'שיחה קצרה והבנה של מה שעובר עליך — כאב, שינה, סטרס או תחושה כללית בגוף. מסתכלים על התמונה המלאה, לא רק על הסימפטום.' },
-  { num: '02', title: 'טיפול מותאם לגוף ולנפש שלך',  sub: 'Personalized Treatment', desc: 'הדיקור נעשה בעדינות ובהתאמה אישית, במטרה להחזיר זרימה ואיזון למערכת. רוב המטופלים חווים טיפול רגוע ונעים.' },
-  { num: '03', title: 'שיפור הדרגתי ויציב',           sub: 'Gradual Improvement',   desc: 'הגוף מתחיל להגיב, והתהליך מוביל להפחתת סימפטומים ולתחושה כללית טובה יותר. לעיתים ניתן להרגיש שינוי כבר אחרי מספר טיפולים.' },
-]
-
-function ProcessSection() {
-  return (
-    <section id="process" className="py-28 bg-stone-950 text-white relative overflow-hidden">
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div style={{ background: 'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(120,53,15,0.25) 0%, transparent 70%)' }} className="absolute inset-0" />
-      </div>
-
-      <div className="relative mx-auto max-w-6xl px-6">
-
-        <motion.div
-          variants={fadeUp} initial="hidden" whileInView="show"
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.5 }}
-          className="mb-16 text-center"
-        >
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-500">תהליך הטיפול</p>
-          <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">איך זה עובד?</h2>
-          <p className="mt-4 text-stone-400">התהליך פשוט, ברור ומותאם אליך אישית</p>
-        </motion.div>
-
-        <div className="grid gap-px sm:grid-cols-2 lg:grid-cols-3 bg-white/5 rounded-2xl overflow-hidden">
-          {processSteps.map((step, i) => (
-            <motion.div
-              key={step.num}
-              variants={fadeUp} initial="hidden" whileInView="show"
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-stone-950 p-8 hover:bg-stone-900/60 transition-colors"
-            >
-              <div className="font-['Frank_Ruhl_Libre'] mb-6 text-5xl font-bold text-amber-500/25">{step.num}</div>
-              <h3 className="text-lg font-bold text-white">{step.title}</h3>
-              <p className="mt-1 text-xs font-medium tracking-wide text-amber-400/70">{step.sub}</p>
-              <p className="mt-3 text-sm text-stone-400 leading-relaxed">{step.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-          variants={fadeUp} initial="hidden" whileInView="show"
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 text-center"
-        >
-          <Button
-            asChild size="lg"
-            className="rounded-2xl px-8 py-7 text-base font-semibold bg-gradient-to-l from-amber-500 to-amber-400 hover:from-amber-600 hover:to-amber-500 text-stone-900 border-0 shadow-xl shadow-amber-500/20"
-          >
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-              <WaIcon />
-              רוצה לבדוק אם זה מתאים לך?
-            </a>
-          </Button>
-        </motion.div>
-
-      </div>
-    </section>
-  )
-}
 
 /* ══════════════════════════════════════════════════════════════
    5. ABOUT / למה לבחור בי?
@@ -702,7 +635,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <TreatmentsSection />
-        <ProcessSection />
         <AboutSection />
         <TestimonialsSection />
         <FaqSection />
