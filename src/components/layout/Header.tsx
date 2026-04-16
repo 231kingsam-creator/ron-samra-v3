@@ -27,7 +27,6 @@ export function Header({ page = 'home' }: HeaderProps) {
   const navItems: NavItem[] = [
     { label: 'אודות',        href: `${base}#about` },
     { label: 'טיפולים',      href: `${base}#treatments` },
-    { label: 'תהליך',        href: `${base}#process` },
     { label: 'שאלות נפוצות', href: `${base}#faq` },
     { label: 'מאמרים',       href: 'articles.html' },
   ]
