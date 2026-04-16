@@ -5,7 +5,6 @@ import { Header } from '../components/layout/Header'
 import { Footer } from '../components/layout/Footer'
 import { FloatingWhatsApp } from '../components/FloatingWhatsApp'
 import { AccessibilityWidget } from '../components/AccessibilityWidget'
-import { AnimatedTextCycle } from '../components/AnimatedTextCycle'
 import { Button } from '../components/ui/button'
 import { cn } from '../lib/utils'
 
@@ -27,7 +26,7 @@ const fadeUp = {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   1. HERO  — split layout: text right (RTL), image left
+   1. HERO
 ══════════════════════════════════════════════════════════════ */
 function HeroSection() {
   return (
@@ -41,7 +40,7 @@ function HeroSection() {
       <div className="mx-auto w-full max-w-7xl px-6 pb-16 pt-28">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
-          {/* Text — right in RTL, order-2 so image shows first on mobile */}
+          {/* Text */}
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,19 +55,16 @@ function HeroSection() {
             </div>
 
             <h1 className="text-5xl font-bold leading-[1.1] text-stone-900 md:text-6xl xl:text-7xl">
-              סובלים מ{' '}
-              <AnimatedTextCycle
-                words={['כאב', 'סטרס', 'שינה לא מאוזנת', 'מתח', 'חרדה', 'מיגרנות']}
-                interval={3000}
-                className="bg-gradient-to-l from-amber-700 via-amber-600 to-amber-500 bg-clip-text text-transparent"
-              />
-              <span className="text-stone-300">?</span>
+              להחזיר את הגוף לאיזון —{' '}
+              <span className="bg-gradient-to-l from-amber-700 via-amber-600 to-amber-500 bg-clip-text text-transparent">
+                ולהרגיש טוב יותר ביומיום
+              </span>
             </h1>
 
             <p className="mx-auto mt-6 max-w-lg text-xl font-light leading-relaxed text-stone-600 lg:mx-0">
-              טיפול מדויק שמכוון לשורש הבעיה — לא רק לסימפטום.
+              רפואה סינית עתיקה ומסורתית במודיעין — עם טיפול אישי, קשוב ומדויק
             </p>
-            <p className="mt-2 text-sm text-stone-400">מודיעין מכבים רעות · מטפל מוסמך</p>
+            <p className="mt-2 text-sm text-stone-400">ניסיון של מעל 35 שנה · בהפחתת כאב, סטרס ושיפור השינה</p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row justify-center lg:justify-start">
               <Button
@@ -77,26 +73,26 @@ function HeroSection() {
               >
                 <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
                   <WaIcon />
-                  התייעצות חינם בוואטסאפ
+                  שלחו הודעה בוואטסאפ לקביעת תור
                 </a>
               </Button>
               <Button
                 asChild size="lg" variant="ghost"
                 className="rounded-2xl px-8 py-7 text-base text-stone-600 hover:bg-stone-100"
               >
-                <a href="#treatments">איך הטיפול עובד ←</a>
+                <a href="#treatments">למי זה מתאים? ←</a>
               </Button>
             </div>
+            <p className="mt-3 text-xs text-stone-400 text-center lg:text-start">מענה אישי, ללא התחייבות</p>
           </motion.div>
 
-          {/* Image — left in RTL, order-1 so it shows first on mobile */}
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.85, delay: 0.2 }}
             className="order-1 lg:order-2 relative"
           >
-            {/* Soft glow behind image */}
             <div aria-hidden className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-amber-100/60 blur-3xl" />
 
             <div className="relative mx-auto aspect-[3/4] max-w-[380px] overflow-hidden rounded-3xl shadow-2xl shadow-stone-900/15 lg:max-w-none">
@@ -106,7 +102,6 @@ function HeroSection() {
                 className="h-full w-full object-cover"
                 style={{ objectPosition: 'center 20%' }}
               />
-              {/* Subtle bottom vignette */}
               <div className="absolute inset-0 bg-gradient-to-t from-stone-900/20 via-transparent to-transparent" />
             </div>
 
@@ -150,15 +145,15 @@ function TrustBar() {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   3. TREATMENTS
+   3. TREATMENTS / למי זה מתאים?
 ══════════════════════════════════════════════════════════════ */
 const treatments = [
-  { num: '01', title: 'כאב גב, צוואר וכתפיים', desc: 'כאב כרוני, נוקשות ומתח שמגבילים את היומיום',   href: '/articles/pillar-pain.html' },
-  { num: '02', title: 'כאבי ראש ומיגרנות',     desc: 'הקלה על מיגרנות חוזרות וכאבי ראש כרוניים',   href: '/articles/pillar-pain.html' },
-  { num: '03', title: 'סטרס וחרדה',             desc: 'מתח מתמשך, דאגנות ותחושת עומס שלא מרפה',     href: '/articles/pillar-stress-sleep.html' },
-  { num: '04', title: 'הפרעות שינה',            desc: 'קושי להירדם, שינה קטועה ועייפות למחרת',      href: '/articles/pillar-stress-sleep.html' },
-  { num: '05', title: 'אסטמה וקוצר נשימה',     desc: 'הפחתת תדירות ועוצמת הסימפטומים',              href: '/articles/pillar-digestion.html' },
-  { num: '06', title: 'פריון ובריאות האישה',   desc: 'תמיכה בפריון, מחזור ואיזון הורמונלי',         href: '/articles/pillar-fertility.html' },
+  { num: '01', title: 'כאב שלא עובר?',               desc: 'כאבי גב, צוואר, ראש ומפרקים — גם אחרי פיזיותרפיה ותרופות. הרפואה הסינית מטפלת בשורש הבעיה, לא רק בסימפטום.',      href: '/articles/pillar-pain.html' },
+  { num: '02', title: 'סטרס ועומס רגשי',              desc: 'מתח שלא עוזב, חרדה, עייפות כרונית, עומס במחשבות — הגוף נושא את הלחץ, והרפואה הסינית עוזרת לשחרר.',              href: '/articles/pillar-stress-sleep.html' },
+  { num: '03', title: 'שינה גרועה?',                  desc: 'קושי להירדם, התעוררויות באמצע הלילה, שינה לא מרעננת — שינה עמוקה וטבעית היא לא מותרות, היא חיונית.',             href: '/articles/pillar-stress-sleep.html' },
+  { num: '04', title: 'עייפות כרונית?',               desc: 'לא משנה כמה ישנת — עדיין מרגישים עייפות? אנרגיה נמוכה שמשפיעה על כל תחום בחיים, מהעבודה ועד לפנאי.',            href: '/articles/pillar-digestion.html' },
+  { num: '05', title: '"הכל תקין" — אבל אתה לא?',     desc: 'הבדיקות יצאו תקינות, אבל אתה מרגיש שמשהו לא בסדר? הרפואה הסינית מקשיבה למה שהרגיל לפעמים מפספס.',             href: '/articles/pillar-digestion.html' },
+  { num: '06', title: 'בעיות הורמונליות ופוריות?',    desc: 'מחזור לא סדיר, תסמיני מנופאוזה, תמיכה בתהליך פוריות — גישה טבעית, עדינה ומותאמת אישית.',                         href: '/articles/pillar-fertility.html' },
 ]
 
 function TreatmentsSection() {
@@ -172,9 +167,9 @@ function TreatmentsSection() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">תחומי טיפול</p>
-          <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl">מה הגוף מנסה לומר</h2>
-          <p className="mt-4 text-stone-500 text-base">רפואה סינית קלאסית מטפלת בשורש, לא רק בסימפטום</p>
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">למי זה מתאים?</p>
+          <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl">לאנשים שסבלו מספיק</h2>
+          <p className="mt-4 text-stone-500 text-base">שלא מוכנים להמשיך לחיות עם הכאב ומוכנים לשנות. הגוף מדבר — לפעמים דרך כאב, עייפות או מתח.</p>
         </motion.div>
 
         <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -201,22 +196,108 @@ function TreatmentsSection() {
           ))}
         </ul>
 
+        <motion.div
+          variants={fadeUp} initial="hidden" whileInView="show"
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-14 text-center"
+        >
+          <p className="mb-2 text-base font-semibold text-stone-700">מזהים את עצמכם?</p>
+          <p className="mb-6 text-sm text-stone-500">שלחו הודעה קצרה — נשמח לשמוע ולבדוק יחד איך אפשר לעזור.</p>
+          <Button
+            asChild size="lg"
+            className="rounded-2xl bg-gradient-to-l from-amber-600 to-amber-500 hover:from-amber-700 hover:to-amber-600 text-white border-0 shadow-lg shadow-amber-500/20"
+          >
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+              <WaIcon />
+              שלחו הודעה בוואטסאפ
+            </a>
+          </Button>
+        </motion.div>
+
       </div>
     </section>
   )
 }
 
 /* ══════════════════════════════════════════════════════════════
-   4. ABOUT
+   4. PROCESS / איך זה עובד?
+══════════════════════════════════════════════════════════════ */
+const processSteps = [
+  { num: '01', title: 'אבחון אישי ומדויק',            sub: 'Personal Diagnosis',    desc: 'שיחה קצרה והבנה של מה שעובר עליך — כאב, שינה, סטרס או תחושה כללית בגוף. מסתכלים על התמונה המלאה, לא רק על הסימפטום.' },
+  { num: '02', title: 'טיפול מותאם לגוף ולנפש שלך',  sub: 'Personalized Treatment', desc: 'הדיקור נעשה בעדינות ובהתאמה אישית, במטרה להחזיר זרימה ואיזון למערכת. רוב המטופלים חווים טיפול רגוע ונעים.' },
+  { num: '03', title: 'שיפור הדרגתי ויציב',           sub: 'Gradual Improvement',   desc: 'הגוף מתחיל להגיב, והתהליך מוביל להפחתת סימפטומים ולתחושה כללית טובה יותר. לעיתים ניתן להרגיש שינוי כבר אחרי מספר טיפולים.' },
+]
+
+function ProcessSection() {
+  return (
+    <section id="process" className="py-28 bg-stone-950 text-white relative overflow-hidden">
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div style={{ background: 'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(120,53,15,0.25) 0%, transparent 70%)' }} className="absolute inset-0" />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl px-6">
+
+        <motion.div
+          variants={fadeUp} initial="hidden" whileInView="show"
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 text-center"
+        >
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-500">תהליך הטיפול</p>
+          <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">איך זה עובד?</h2>
+          <p className="mt-4 text-stone-400">התהליך פשוט, ברור ומותאם אליך אישית</p>
+        </motion.div>
+
+        <div className="grid gap-px sm:grid-cols-2 lg:grid-cols-3 bg-white/5 rounded-2xl overflow-hidden">
+          {processSteps.map((step, i) => (
+            <motion.div
+              key={step.num}
+              variants={fadeUp} initial="hidden" whileInView="show"
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="bg-stone-950 p-8 hover:bg-stone-900/60 transition-colors"
+            >
+              <div className="font-['Frank_Ruhl_Libre'] mb-6 text-5xl font-bold text-amber-500/25">{step.num}</div>
+              <h3 className="text-lg font-bold text-white">{step.title}</h3>
+              <p className="mt-1 text-xs font-medium tracking-wide text-amber-400/70">{step.sub}</p>
+              <p className="mt-3 text-sm text-stone-400 leading-relaxed">{step.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          variants={fadeUp} initial="hidden" whileInView="show"
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-12 text-center"
+        >
+          <Button
+            asChild size="lg"
+            className="rounded-2xl px-8 py-7 text-base font-semibold bg-gradient-to-l from-amber-500 to-amber-400 hover:from-amber-600 hover:to-amber-500 text-stone-900 border-0 shadow-xl shadow-amber-500/20"
+          >
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+              <WaIcon />
+              רוצה לבדוק אם זה מתאים לך?
+            </a>
+          </Button>
+        </motion.div>
+
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════════════════
+   5. ABOUT / למה לבחור בי?
 ══════════════════════════════════════════════════════════════ */
 function AboutSection() {
   const credentials = [
-    'BAc. Lic. Ac — I.C.O.M London',
-    '7 שנים בלונדון (4 לימוד + 3 הדרכה קלינית)',
-    'ממקימי האגודה לרפואה סינית בישראל (1995)',
-    'מטפל מוסמך בכללית משלימה',
+    'B.Ac. Lic. Ac — קולג\' בינלאומי לרפואה סינית, לונדון',
     'חבר באיגוד הבריטי לרפואה סינית (B.Ac.C)',
-    'מרצה באוניברסיטה העברית',
+    'ממקימי האגודה לרפואה סינית בישראל (1995)',
+    'מרצה באוניברסיטה העברית (2005–2021)',
+    'מטפל מוסמך בכללית משלימה (מ-1997)',
   ]
 
   return (
@@ -258,21 +339,21 @@ function AboutSection() {
           >
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">אודות</p>
             <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl leading-tight">
-              35 שנה של ידע,<br />
-              <span className="text-amber-700">בשירות הגוף שלך</span>
+              למה לבחור בי?<br />
+              <span className="text-amber-700">כי טיפול טוב מתחיל בהקשבה</span>
             </h2>
 
             <blockquote className="my-8 border-s-2 border-amber-400 ps-5">
               <p className="font-['Frank_Ruhl_Libre'] text-xl italic text-stone-600 leading-relaxed">
-                "הרגשתי שהגעתי הביתה, שמצאתי את הדרך שלי לעזור לאחרים לשפר את בריאותם ואיכות חייהם."
+                "אני רון סמרה, מטפל ברפואה סינית עם ניסיון של מעל 35 שנה. לאורך השנים ליוויתי מטופלים רבים עם כאב, סטרס, בעיות שינה וחוסר איזון — כל אחד עם הסיפור שלו."
               </p>
             </blockquote>
 
             <div className="space-y-3.5 text-stone-600 leading-relaxed">
-              <p>כילד הסתכלתי על אבי כשחזר הביתה מדי ערב — רופא בכיר ומנהל מחלקה פנימית בבית חולים תל השומר. למרות העייפות, היה על פניו אור של מי שהצליח לעזור להרבה אנשים. זה ריגש אותי עמוקות.</p>
-              <p>לאחר תואר ראשון בביולוגיה באוניברסיטה העברית, טסתי לאנגליה וסיימתי לימודים בקולג' הבינלאומי לרפואה סינית (I.C.O.M) — המוביל בלימודי אקופונקטורה באירופה. שם נחשפתי לעולם חדש: רפואה המבוססת על היחסים ההרמוניים בין האדם ליקום, ועל החיבור בין גוף ונפש.</p>
-              <p>מזה 35+ שנים אני מטפל במסגרת ציבורית ופרטית, כולל הוראה בתכנית לרפואה סינית עתיקה באוניברסיטה העברית. בעבודתי אני משלב דיקור סיני, טווינה, מוקסה, כוסות רוח וייעוץ תזונתי.</p>
-              <p>בשנים האחרונות אני מלווה אנשים רבים המחפשים דרך אחרת להתמודד עם לחץ, מתח נפשי, וקשיים פיזיים ורגשיים.</p>
+              <p>כילד גדלתי בצל הרפואה: אבי היה רופא בכיר בתל השומר. נחשפתי להתרגשות ולעבודתו המסורה של אדם שמצליח לעזור לאחרים ולתת תקווה. רציתי לעסוק ברפואה.</p>
+              <p>דרכי הובילה אותי ללונדון, שם למדתי רפואה סינית בקולג' הבינלאומי לרפואה סינית (I.C.O.M) — המוביל באירופה. 4 שנות לימוד ו-3 שנות עבודה כמנחה קליני.</p>
+              <p>הגישה שלי פשוטה: לא רק לטפל בסימפטום — אלא להבין מה עומד מאחוריו. כל טיפול מותאם אישית, בקצב שנכון לך, ובמטרה להחזיר את הגוף לאיזון.</p>
+              <p>אני מאמין בטיפול מדויק, קשוב ולא אגרסיבי — כזה שהגוף יכול לקבל ולהגיב אליו. בעבודתי אני משלב דיקור סיני, טווינה, מוקסה, כוסות רוח וייעוץ תזונתי.</p>
             </div>
 
             <ul className="mt-7 space-y-2.5">
@@ -304,64 +385,12 @@ function AboutSection() {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   5. PROCESS
-══════════════════════════════════════════════════════════════ */
-const processSteps = [
-  { num: '01', title: 'אבחון חוקתי',   sub: 'Constitutional Diagnosis', desc: 'שיחה מעמיקה ואבחון על-פי שיטת Stems & Branches — חיפוש שורש חוסר האיזון, לא רק הסימפטום.' },
-  { num: '02', title: 'שחרור הזרימה',  sub: 'Flow Restoration',          desc: 'דיקור מדויק לשחרור חסימות אנרגטיות ושחזור זרימת ה-Qi בערוצי הגוף.' },
-  { num: '03', title: 'התיקון המבני',  sub: 'The Structural Fix',         desc: 'טיפול ממוקד בשורש הבעיה — צמחי מרפא, טווינה ומוקסה בהתאם לצרכים האישיים.' },
-  { num: '04', title: 'חוסן ושמירה',   sub: 'Resilience & Maintenance',   desc: 'בניית עמידות הגוף, מניעת הישנות ושמירה על האיזון שהושג לאורך זמן.' },
-]
-
-function ProcessSection() {
-  return (
-    <section id="process" className="py-28 bg-stone-950 text-white relative overflow-hidden">
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div style={{ background: 'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(120,53,15,0.25) 0%, transparent 70%)' }} className="absolute inset-0" />
-      </div>
-
-      <div className="relative mx-auto max-w-6xl px-6">
-
-        <motion.div
-          variants={fadeUp} initial="hidden" whileInView="show"
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.5 }}
-          className="mb-16 text-center"
-        >
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-500">תהליך הטיפול</p>
-          <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">התהליך פשוט, ברור ומותאם אישית</h2>
-          <p className="mt-4 text-stone-400">טיפול טוב מתחיל בהקשבה</p>
-        </motion.div>
-
-        <div className="grid gap-px sm:grid-cols-2 lg:grid-cols-4 bg-white/5 rounded-2xl overflow-hidden">
-          {processSteps.map((step, i) => (
-            <motion.div
-              key={step.num}
-              variants={fadeUp} initial="hidden" whileInView="show"
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-stone-950 p-8 hover:bg-stone-900/60 transition-colors"
-            >
-              <div className="font-['Frank_Ruhl_Libre'] mb-6 text-5xl font-bold text-amber-500/25">{step.num}</div>
-              <h3 className="text-lg font-bold text-white">{step.title}</h3>
-              <p className="mt-1 text-xs font-medium tracking-wide text-amber-400/70">{step.sub}</p>
-              <p className="mt-3 text-sm text-stone-400 leading-relaxed">{step.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-
-      </div>
-    </section>
-  )
-}
-
-/* ══════════════════════════════════════════════════════════════
    6. TESTIMONIALS
 ══════════════════════════════════════════════════════════════ */
 const testimonials = [
-  { text: 'הצלחת להביאני למצב בריא. אתה כישרון אמיתי.',                                                                                   author: 'חנה תבל', context: 'פציאליס וחרדה · תוך חודש ימים' },
-  { text: 'מאז השתמשתי פעמים ספורות בלבד במשאף. השיפור היה מורגש תוך כמה מפגשים בלבד.',                                                   author: 'א.י',      context: 'אסטמה · תוך 5 טיפולים' },
-  { text: 'בפעם הראשונה בשנים אני קם בבוקר ומרגיש נח. כאב שלא נתן לי לישון — נעלם כמעט לגמרי.',                                          author: 'דני ל.',   context: 'נדודי שינה כרוניים · תוך 4 טיפולים' },
+  { text: 'כבר אחרי כמה טיפולים הרגשתי הקלה משמעותית בכאבי הגב. רון הקשיב באמת לגוף שלי!',                             author: 'דינה', context: 'כאבי גב · גיל 42' },
+  { text: 'סטרס ועייפות שנראו בלתי פתירים נעלמו כמעט לגמרי. אני ישן טוב יותר והתחושה שלי השתנתה.',                      author: 'יוסי', context: 'סטרס ועייפות · גיל 35' },
+  { text: 'הדיקור הסיני עזר לי לאזן את המחזור ולהרגיש יותר אנרגיה וחיוניות. ממליצה בחום!',                              author: 'שרה', context: 'איזון הורמונלי · גיל 50' },
 ]
 
 function TestimonialsSection() {
@@ -376,7 +405,7 @@ function TestimonialsSection() {
           className="mb-16 text-center"
         >
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">ביקורות</p>
-          <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl">מה מטופלים אומרים</h2>
+          <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl">מה המטופלים שלי אומרים</h2>
           <div className="mt-4 flex items-center justify-center gap-2">
             <span className="text-amber-400 text-base tracking-wide">★★★★★</span>
             <span className="text-sm text-stone-400">Google Reviews</span>
@@ -408,20 +437,31 @@ function TestimonialsSection() {
           ))}
         </ul>
 
+        <div className="mt-12 text-center">
+          <Button
+            asChild size="lg"
+            className="rounded-2xl bg-gradient-to-l from-amber-600 to-amber-500 hover:from-amber-700 hover:to-amber-600 text-white border-0 shadow-lg shadow-amber-500/20"
+          >
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+              <WaIcon />
+              רוצה לבדוק איך אפשר לעזור גם לך?
+            </a>
+          </Button>
+        </div>
+
       </div>
     </section>
   )
 }
 
 /* ══════════════════════════════════════════════════════════════
-   7. FAQ
+   7. WHY ACUPUNCTURE WORKS
 ══════════════════════════════════════════════════════════════ */
-const faqs = [
-  { q: 'האם דיקור סיני כואב?',                      a: 'בדרך כלל לא. המחטים דקות מאוד — רוב המטופלים כמעט לא מרגישים אותן. ייתכן עקצוץ קל בלבד. רוב האנשים נרגעים ולעיתים אף נרדמים במהלך הטיפול.' },
-  { q: 'כמה טיפולים צריך?',                          a: 'בעיות חדשות ואקוטיות: בדרך כלל 3–5 טיפולים. בעיות כרוניות שנמשכות שנים: בדרך כלל 6–10 טיפולים. אקבע אומדן מדויק יותר לאחר האבחון הראשון.' },
-  { q: 'תוך כמה זמן מרגישים שיפור?',                a: 'מטופלים רבים מדווחים על שיפור כבר לאחר 1–3 טיפולים. בבעיות ותיקות השיפור נוטה להיות הדרגתי ומצטבר.' },
-  { q: 'האם אפשר לשלב עם טיפול רפואי רגיל?',        a: 'כן, בהחלט. רפואה סינית משלימה את הטיפול הרפואי הקונבנציונלי ולא מחליפה אותו. חשוב ליידע את הרופא המטפל.' },
-  { q: 'מה כלול בטיפול הראשון?',                    a: 'הטיפול הראשון כולל: אבחון קונסטיטוציונלי מלא, תשאול רפואי מקיף, בניית תוכנית טיפול אישית, וטיפול דיקור ראשון. סה"כ 60–75 דקות.' },
+const acupuncturePoints = [
+  { q: 'אבחון שלם',       a: 'שיחה אמיתית: מה הגוף מרגיש ומה החיים אומרים, לא רק רשימת סימפטומים. האבחון מאפשר להבין את שורש הבעיה ולא רק את מה שנראה על פני השטח.' },
+  { q: 'טיפול בשורש',     a: 'הדיקור מפעיל נקודות שמשפיעות על כל מערכות הגוף — לא רק על הסימפטום, אלא על מה שגורם לו.' },
+  { q: 'גוף ונפש ביחד',   a: 'סטרס ורגשות מתבטאים בגוף; הטיפול מאזן גם את הממד הרגשי ולא רק את הפיזי.' },
+  { q: 'תוצאה מורגשת',    a: 'רוב המטופלים מדווחים על שיפור כבר לאחר 2–3 טיפולים. השיפור הדרגתי, מצטבר ויציב לאורך זמן.' },
 ]
 
 function FaqSection() {
@@ -434,21 +474,24 @@ function FaqSection() {
           variants={fadeUp} initial="hidden" whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.5 }}
-          className="mb-16 text-center"
+          className="mb-8 text-center"
         >
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">שאלות נפוצות</p>
-          <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl">שאלות ותשובות</h2>
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">דיקור סיני</p>
+          <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl">למה דיקור סיני עובד?</h2>
+          <p className="mt-4 text-stone-500 max-w-xl mx-auto leading-relaxed">
+            דיקור סיני פותח חסימות באנרגיה, משחרר מתח ומאזן את מערכות הגוף והנפש. כך ניתן להשפיע על כאב, עייפות, סטרס ושינה — ולטפל בשורש, לא רק בסימפטום.
+          </p>
         </motion.div>
 
-        <ul className="space-y-3">
-          {faqs.map((faq, i) => (
+        <ul className="mt-12 space-y-3">
+          {acupuncturePoints.map((item, i) => (
             <li key={i} className="overflow-hidden rounded-2xl border border-stone-200 bg-white">
               <button
                 onClick={() => setOpen(open === i ? null : i)}
                 className="flex w-full items-center justify-between gap-4 px-6 py-5 text-start font-semibold text-stone-900 hover:bg-stone-50/80 transition-colors"
                 aria-expanded={open === i}
               >
-                <span className="text-sm md:text-base">{faq.q}</span>
+                <span className="text-sm md:text-base">{item.q}</span>
                 <ChevronDown
                   className={cn(
                     'h-4 w-4 shrink-0 text-amber-600 transition-transform duration-200',
@@ -458,7 +501,7 @@ function FaqSection() {
               </button>
               {open === i && (
                 <div className="border-t border-stone-100 px-6 pb-5 pt-4 text-sm text-stone-600 leading-relaxed">
-                  {faq.a}
+                  {item.a}
                 </div>
               )}
             </li>
@@ -466,14 +509,14 @@ function FaqSection() {
         </ul>
 
         <div className="mt-12 text-center">
-          <p className="mb-5 text-sm text-stone-400">יש שאלה נוספת?</p>
+          <p className="mb-5 text-sm text-stone-400">רוצה לבדוק אם זה מתאים לך?</p>
           <Button
             asChild size="lg"
             className="rounded-2xl bg-gradient-to-l from-amber-600 to-amber-500 hover:from-amber-700 hover:to-amber-600 text-white border-0"
           >
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
               <WaIcon />
-              שאלו אותי בוואטסאפ
+              שלח הודעה בוואטסאפ
             </a>
           </Button>
         </div>
@@ -536,7 +579,6 @@ function ArticlesPreviewSection() {
                 href={a.href}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-stone-900/5"
               >
-                {/* Amber top accent */}
                 <div className="h-1 bg-gradient-to-l from-amber-400 to-amber-600" />
                 <div className="flex flex-1 flex-col p-7">
                   <span className={`mb-4 inline-block self-start rounded-full px-3 py-1 text-xs font-semibold ${a.tagStyle}`}>
@@ -695,8 +737,8 @@ export default function Home() {
         <HeroSection />
         <TrustBar />
         <TreatmentsSection />
-        <AboutSection />
         <ProcessSection />
+        <AboutSection />
         <TestimonialsSection />
         <FaqSection />
         <ArticlesPreviewSection />
