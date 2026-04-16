@@ -5,7 +5,6 @@ import { Header } from '../components/layout/Header'
 import { Footer } from '../components/layout/Footer'
 import { FloatingWhatsApp } from '../components/FloatingWhatsApp'
 import { AccessibilityWidget } from '../components/AccessibilityWidget'
-import { AnimatedTextCycle } from '../components/AnimatedTextCycle'
 import { Button } from '../components/ui/button'
 import { cn } from '../lib/utils'
 
@@ -41,27 +40,33 @@ function HeroSection() {
       <div className="mx-auto w-full max-w-7xl px-6 pb-16 pt-28">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
-          {/* Text — right in RTL, order-2 so image shows first on mobile */}
+          {/* Text */}
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="order-2 lg:order-1 text-center lg:text-start"
           >
+            <div className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-amber-200/70 bg-amber-50 px-4 py-1.5">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+              <span className="text-xs font-semibold tracking-wide text-amber-800">
+                BAc Lic Ac · I.C.O.M London · 35+ שנות ניסיון
+              </span>
+            </div>
+
             <h1 className="text-5xl font-bold leading-[1.1] text-stone-900 md:text-6xl xl:text-7xl">
-              סובלים מ{' '}
-              <AnimatedTextCycle
-                words={['כאב', 'סטרס', 'שינה לא מאוזנת', 'מתח', 'חרדה', 'מיגרנות']}
-                interval={3000}
-                className="bg-gradient-to-l from-amber-700 via-amber-600 to-amber-500 bg-clip-text text-transparent"
-              />
-              <span className="text-stone-300">?</span>
+              להחזיר את הגוף לאיזון —{' '}
+              <span className="bg-gradient-to-l from-amber-700 via-amber-600 to-amber-500 bg-clip-text text-transparent">
+                ולהרגיש טוב יותר ביומיום
+              </span>
             </h1>
 
             <p className="mx-auto mt-6 max-w-lg text-xl font-light leading-relaxed text-stone-600 lg:mx-0">
-              טיפול מדויק שמכוון לשורש הבעיה — לא רק לסימפטום.
+              רפואה סינית עתיקה ומסורתית במודיעין<br />
+              עם טיפול אישי, קשוב ומדויק
             </p>
-            <p className="mt-2 text-sm text-stone-400">מודיעין מכבים רעות · מטפל מוסמך</p>
+            <p className="mt-2 text-sm text-stone-400">ניסיון של מעל 35 שנה בליווי מטופלים</p>
+            <p className="mt-1 text-sm text-stone-400">בהפחתת כאב, סטרס ושיפור השינה — טיפול שמגיע לשורש הבעיה</p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row justify-center lg:justify-start">
               <Button
@@ -70,16 +75,17 @@ function HeroSection() {
               >
                 <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
                   <WaIcon />
-                  התייעצות חינם בוואטסאפ
+                  שלחו הודעה בוואטסאפ לקביעת תור
                 </a>
               </Button>
               <Button
                 asChild size="lg" variant="ghost"
                 className="rounded-2xl px-8 py-7 text-base text-stone-600 hover:bg-stone-100"
               >
-                <a href="#treatments">איך הטיפול עובד ←</a>
+                <a href="#treatments">למי זה מתאים? ←</a>
               </Button>
             </div>
+            <p className="mt-3 text-xs text-stone-400 text-center lg:text-start">מענה אישי, ללא התחייבות</p>
           </motion.div>
 
           {/* Image */}
