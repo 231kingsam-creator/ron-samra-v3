@@ -62,9 +62,11 @@ function HeroSection() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-lg text-xl font-light leading-relaxed text-stone-600 lg:mx-0">
-              רפואה סינית עתיקה ומסורתית במודיעין — עם טיפול אישי, קשוב ומדויק
+              רפואה סינית עתיקה ומסורתית במודיעין<br />
+              עם טיפול אישי, קשוב ומדויק
             </p>
-            <p className="mt-2 text-sm text-stone-400">ניסיון של מעל 35 שנה · בהפחתת כאב, סטרס ושיפור השינה</p>
+            <p className="mt-2 text-sm text-stone-400">ניסיון של מעל 35 שנה בליווי מטופלים</p>
+            <p className="mt-1 text-sm text-stone-400">בהפחתת כאב, סטרס ושיפור השינה — טיפול שמגיע לשורש הבעיה</p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row justify-center lg:justify-start">
               <Button
