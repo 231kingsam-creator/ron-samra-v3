@@ -435,7 +435,7 @@ const articlePreviews = [
     title: 'כאב ותנועה',
     desc: 'כאב גב, צוואר, כתפיים ופרקים — הבנת השורש וטיפול קלאסי שמחזיר את התנועה',
     href: 'articles/article-back-pain.html',
-    image: '/images/article/article-headache.png',
+    image: '/images/topics/01-back-pain.jpg',
   },
   {
     icon: '🌙',
@@ -444,7 +444,7 @@ const articlePreviews = [
     title: 'שינה וסטרס',
     desc: 'מתח כרוני, חרדה והפרעות שינה — כיצד רפואה סינית מחזירה את האיזון למערכת העצבים',
     href: 'articles/article-sleep.html',
-    image: '/images/article/article-sleep.png',
+    image: '/images/topics/02-stress.jpg',
   },
   {
     icon: '🌿',
@@ -453,7 +453,7 @@ const articlePreviews = [
     title: 'עיכול וחיסון',
     desc: 'מעי רגיש, נפיחות, ריפלוקס ומחסות חלושה — הגישה הסינית לחיזוק הגוף מבפנים',
     href: 'articles/article-allergies.html',
-    image: '/images/article/article-allergies.png',
+    image: '/images/topics/03-sleep.jpg',
   },
   {
     icon: '🌸',
@@ -462,7 +462,7 @@ const articlePreviews = [
     title: 'פריון ואישה',
     desc: 'תמיכה בפריון, איזון מחזור, גיל המעבר ובריאות הורמונלית לאורך כל שלבי החיים',
     href: 'articles/article-fertility.html',
-    image: '/images/article/article-fertility.png',
+    image: '/images/topics/06-hormones.jpg',
   },
   {
     icon: '🧒',
@@ -471,7 +471,7 @@ const articlePreviews = [
     title: 'ילדים ועצבים',
     desc: 'טיפול עדין לילדים — קשיי שינה, כאבי בטן, חרדות ובעיות מערכת עצבים',
     href: 'articles/article-stress.html',
-    image: '/images/article/article-gynecology.png',
+    image: '/images/topics/05-checkup.jpg',
   },
   {
     icon: '✨',
@@ -480,7 +480,7 @@ const articlePreviews = [
     title: 'עור ופנים',
     desc: 'אקנה, אקזמה, פסוריאזיס ועור יבש — הקשר בין עור לאיזון פנימי בראייה הסינית',
     href: 'articles/article-sweating.html',
-    image: '/images/article/article-sweating.png',
+    image: '/images/topics/04-fatigue.jpg',
   },
 ]
 
@@ -524,8 +524,8 @@ function ArticlesPreviewSection() {
                 href={p.href}
                 className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-amber-200"
               >
-                {/* Compact image */}
-                <div className="h-36 w-full overflow-hidden bg-stone-100">
+                {/* Cover image — 200px */}
+                <div className="h-[200px] w-full overflow-hidden bg-stone-100">
                   <img
                     src={p.image}
                     alt={p.title}
