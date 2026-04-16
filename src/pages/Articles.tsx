@@ -12,36 +12,42 @@ const pillars = [
     title: 'כאב ותנועה',
     desc: 'כאב גב, צוואר, כתפיים ופרקים — הבנת השורש וטיפול קלאסי שמחזיר את התנועה',
     href: 'articles/article-back-pain.html',
+    image: '/images/article/article-headache.png',
   },
   {
     icon: '🌙',
     title: 'שינה וסטרס',
     desc: 'מתח כרוני, חרדה והפרעות שינה — כיצד רפואה סינית מחזירה את האיזון למערכת העצבים',
     href: 'articles/article-sleep.html',
+    image: '/images/article/article-sleep.png',
   },
   {
     icon: '🌿',
     title: 'עיכול וחיסון',
     desc: 'מעי רגיש, נפיחות, ריפלוקס ומחסות חלושה — הגישה הסינית לחיזוק הגוף מבפנים',
     href: 'articles/article-allergies.html',
+    image: '/images/article/article-allergies.png',
   },
   {
     icon: '🌸',
     title: 'פריון ואישה',
     desc: 'תמיכה בפריון, איזון מחזור, גיל המעבר ובריאות הורמונלית לאורך כל שלבי החיים',
     href: 'articles/article-fertility.html',
+    image: '/images/article/article-fertility.png',
   },
   {
     icon: '🧒',
     title: 'ילדים ועצבים',
     desc: 'טיפול עדין לילדים — קשיי שינה, כאבי בטן, חרדות ובעיות מערכת עצבים',
     href: 'articles/article-stress.html',
+    image: '/images/article/article-gynecology.png',
   },
   {
     icon: '✨',
     title: 'עור ופנים',
     desc: 'אקנה, אקזמה, פסוריאזיס ועור יבש — הקשר בין עור לאיזון פנימי בראייה הסינית',
     href: 'articles/article-sweating.html',
+    image: '/images/article/article-sweating.png',
   },
 ]
 
@@ -72,20 +78,31 @@ export default function Articles() {
               <li key={p.title}>
                 <a
                   href={p.href}
-                  className="flex h-full flex-col items-center rounded-2xl border border-border bg-card p-8 text-center transition-all duration-200 hover:-translate-y-1 hover:border-amber-300 hover:shadow-md"
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:border-amber-300 hover:shadow-md"
                 >
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-amber-50 border border-amber-100 text-3xl">
-                    {p.icon}
+                  {/* Cover image */}
+                  <div className="relative h-44 w-full overflow-hidden bg-amber-50">
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
                   </div>
-                  <h2 className="mt-4 text-lg font-bold text-foreground">
-                    {p.title}
-                  </h2>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
-                    {p.desc}
-                  </p>
-                  <span className="mt-4 text-sm font-bold text-amber-600">
-                    לקריאה ←
-                  </span>
+                  {/* Card body */}
+                  <div className="flex flex-1 flex-col items-center p-6 text-center">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 border border-amber-100 text-2xl -mt-9 shadow-sm">
+                      {p.icon}
+                    </div>
+                    <h2 className="mt-3 text-lg font-bold text-foreground">
+                      {p.title}
+                    </h2>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
+                      {p.desc}
+                    </p>
+                    <span className="mt-4 text-sm font-bold text-amber-600">
+                      לקריאה ←
+                    </span>
+                  </div>
                 </a>
               </li>
             ))}
