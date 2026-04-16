@@ -55,9 +55,9 @@ function HeroSection() {
             </div>
 
             <h1 className="text-5xl font-bold leading-[1.1] text-stone-900 md:text-6xl xl:text-7xl">
-              להחזיר את הגוף לאיזון —<br />
+              להחזיר את הגוף לאיזון<br />
               <span className="bg-gradient-to-l from-amber-700 via-amber-600 to-amber-500 bg-clip-text text-transparent">
-                ולהרגיש טוב יותר ביומיום
+                — ולהרגיש טוב יותר ביומיום
               </span>
             </h1>
 
