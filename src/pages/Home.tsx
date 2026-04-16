@@ -114,12 +114,12 @@ function HeroSection() {
    3. TREATMENTS / למי זה מתאים?
 ══════════════════════════════════════════════════════════════ */
 const treatments = [
-  { num: '01', title: 'כאב שלא עובר?',               desc: 'כאבי גב, צוואר, ראש ומפרקים — גם אחרי פיזיותרפיה ותרופות. הרפואה הסינית מטפלת בשורש הבעיה, לא רק בסימפטום.',      href: 'articles.html', image: '/images/topics/01-back-pain.jpg' },
-  { num: '02', title: 'סטרס ועומס רגשי',              desc: 'מתח שלא עוזב, חרדה, עייפות כרונית, עומס במחשבות — הגוף נושא את הלחץ, והרפואה הסינית עוזרת לשחרר.',              href: 'articles.html', image: '/images/topics/02-stress.jpg' },
-  { num: '03', title: 'שינה גרועה?',                  desc: 'קושי להירדם, התעוררויות באמצע הלילה, שינה לא מרעננת — שינה עמוקה וטבעית היא לא מותרות, היא חיונית.',             href: 'articles.html', image: '/images/topics/03-sleep.jpg' },
-  { num: '04', title: 'עייפות כרונית?',               desc: 'לא משנה כמה ישנת — עדיין מרגישים עייפות? אנרגיה נמוכה שמשפיעה על כל תחום בחיים, מהעבודה ועד לפנאי.',            href: 'articles.html', image: '/images/topics/04-fatigue.jpg' },
-  { num: '05', title: '"הכל תקין" — אבל אתה לא?',     desc: 'הבדיקות יצאו תקינות, אבל אתה מרגיש שמשהו לא בסדר? הרפואה הסינית מקשיבה למה שהרגיל לפעמים מפספס.',             href: 'articles.html', image: '/images/topics/05-checkup.jpg' },
-  { num: '06', title: 'בעיות הורמונליות ופוריות?',    desc: 'מחזור לא סדיר, תסמיני מנופאוזה, תמיכה בתהליך פוריות — גישה טבעית, עדינה ומותאמת אישית.',                         href: 'articles.html', image: '/images/topics/06-hormones.jpg' },
+  { num: '01', title: 'כאב שלא עובר?',               desc: 'כאבי גב, צוואר, ראש ומפרקים — גם אחרי פיזיותרפיה ותרופות. הרפואה הסינית מטפלת בשורש הבעיה, לא רק בסימפטום.',      href: 'articles.html', image: '/images/topics/back-pain.jpg' },
+  { num: '02', title: 'סטרס ועומס רגשי',              desc: 'מתח שלא עוזב, חרדה, עייפות כרונית, עומס במחשבות — הגוף נושא את הלחץ, והרפואה הסינית עוזרת לשחרר.',              href: 'articles.html', image: '/images/topics/stress.jpg' },
+  { num: '03', title: 'שינה גרועה?',                  desc: 'קושי להירדם, התעוררויות באמצע הלילה, שינה לא מרעננת — שינה עמוקה וטבעית היא לא מותרות, היא חיונית.',             href: 'articles.html', image: '/images/topics/sleep.jpg' },
+  { num: '04', title: 'עייפות כרונית?',               desc: 'לא משנה כמה ישנת — עדיין מרגישים עייפות? אנרגיה נמוכה שמשפיעה על כל תחום בחיים, מהעבודה ועד לפנאי.',            href: 'articles.html', image: '/images/topics/fatigue.jpg' },
+  { num: '05', title: '"הכל תקין" — אבל אתה לא?',     desc: 'הבדיקות יצאו תקינות, אבל אתה מרגיש שמשהו לא בסדר? הרפואה הסינית מקשיבה למה שהרגיל לפעמים מפספס.',             href: 'articles.html', image: '/images/topics/checkup.jpg' },
+  { num: '06', title: 'בעיות הורמונליות ופוריות?',    desc: 'מחזור לא סדיר, תסמיני מנופאוזה, תמיכה בתהליך פוריות — גישה טבעית, עדינה ומותאמת אישית.',                         href: 'articles.html', image: '/images/topics/hormones.jpg' },
 ]
 
 function TreatmentsSection() {
