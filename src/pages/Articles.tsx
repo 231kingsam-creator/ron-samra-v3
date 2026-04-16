@@ -11,37 +11,37 @@ const pillars = [
     icon: '🦴',
     title: 'כאב ותנועה',
     desc: 'כאב גב, צוואר, כתפיים ופרקים — הבנת השורש וטיפול קלאסי שמחזיר את התנועה',
-    href: '#',
+    href: 'articles/article-back-pain.html',
   },
   {
     icon: '🌙',
     title: 'שינה וסטרס',
     desc: 'מתח כרוני, חרדה והפרעות שינה — כיצד רפואה סינית מחזירה את האיזון למערכת העצבים',
-    href: '#',
+    href: 'articles/article-sleep.html',
   },
   {
     icon: '🌿',
     title: 'עיכול וחיסון',
     desc: 'מעי רגיש, נפיחות, ריפלוקס ומחסות חלושה — הגישה הסינית לחיזוק הגוף מבפנים',
-    href: '#',
+    href: 'articles/article-allergies.html',
   },
   {
     icon: '🌸',
     title: 'פריון ואישה',
     desc: 'תמיכה בפריון, איזון מחזור, גיל המעבר ובריאות הורמונלית לאורך כל שלבי החיים',
-    href: '#',
+    href: 'articles/article-fertility.html',
   },
   {
     icon: '🧒',
     title: 'ילדים ועצבים',
     desc: 'טיפול עדין לילדים — קשיי שינה, כאבי בטן, חרדות ובעיות מערכת עצבים',
-    href: '#',
+    href: 'articles/article-stress.html',
   },
   {
     icon: '✨',
     title: 'עור ופנים',
     desc: 'אקנה, אקזמה, פסוריאזיס ועור יבש — הקשר בין עור לאיזון פנימי בראייה הסינית',
-    href: '#',
+    href: 'articles/article-sweating.html',
   },
 ]
 

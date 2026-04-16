@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "article-back-pain",
+    "title": "כאבי גב, צוואר וכתפיים",
+    "category": "כאב ותנועה",
+    "description": "כאבי גב, צוואר וכתפיים הם מהתלונות הנפוצות ביותר בחיי היומיום. למה הם חוזרים שוב ושוב — ואיך הרפואה הסינית מטפלת בשורש הבעיה.",
+    "readingTime": "6 דקות קריאה",
+    "href": "articles/article-back-pain.html"
+  },
+  {
+    "slug": "article-sleep",
+    "title": "למה יש לנו בעיות שינה?",
+    "category": "שינה וסטרס",
+    "description": "לא מצליחים להירדם? מתעוררים באמצע הלילה? שליש מחיינו עוברים בשינה — איכות השינה משפיעה על הכל.",
+    "readingTime": "5 דקות קריאה",
+    "href": "articles/article-sleep.html"
+  },
+  {
+    "slug": "article-stress",
+    "title": "סטרס, עומס נפשי וחרדה",
+    "category": "שינה וסטרס",
+    "description": "סטרס, עומס נפשי וחרדה משפיעים על השינה, הנשימה, העיכול והתחושה הכללית. גלו איך דיקור סיני יכול לעזור להרגיע את הגוף ולהחזיר איזון.",
+    "readingTime": "5 דקות קריאה",
+    "href": "articles/article-stress.html"
+  },
+  {
+    "slug": "article-headache",
+    "title": "כל מה שרצית לדעת על כאב ראש",
+    "category": "כאב ותנועה",
+    "description": "מסתובבים כבר כמה ימים עם כאב ראש מטריד שלא נותן מנוח? גלו איך הרפואה הסינית מבינה ומטפלת בכאבי ראש.",
+    "readingTime": "5 דקות קריאה",
+    "href": "articles/article-headache.html"
+  },
+  {
+    "slug": "article-allergies",
+    "title": "לנצח את האלרגיה",
+    "category": "עיכול וחיסון",
+    "description": "התחיל האביב? נזלת, עיניים גרדניות, עטיסות? מעל 20% מהאוכלוסייה סובלים — ויש מה לעשות.",
+    "readingTime": "4 דקות קריאה",
+    "href": "articles/article-allergies.html"
+  },
+  {
+    "slug": "article-sweating",
+    "title": "סובלים מהזעת יתר?",
+    "category": "עיכול וחיסון",
+    "description": "הזעת יתר משפיעה על איכות החיים ועל הביטחון העצמי. הרפואה הסינית מציעה פתרון טבעי ויעיל.",
+    "readingTime": "4 דקות קריאה",
+    "href": "articles/article-sweating.html"
+  },
+  {
+    "slug": "article-fertility",
+    "title": "רפואה סינית ופוריות האישה",
+    "category": "פריון ואישה",
+    "description": "שילוב דיקור סיני בטיפולי פוריות זוכה לתמיכה מחקרית רחבה. גלו כיצד הטיפול משפר את סיכויי ההתעברות.",
+    "readingTime": "6 דקות קריאה",
+    "href": "articles/article-fertility.html"
+  },
+  {
+    "slug": "article-gynecology",
+    "title": "בעיות גינקולוגיות ורפואה סינית",
+    "category": "פריון ואישה",
+    "description": "יותר ויותר נשים פונות לרפואה סינית לטיפול בבעיות גינקולוגיות. גישה הוליסטית ומדויקת לבריאות האישה.",
+    "readingTime": "5 דקות קריאה",
+    "href": "articles/article-gynecology.html"
+  }
+]
