@@ -25,10 +25,10 @@ export function Header({ page = 'home' }: HeaderProps) {
   const base = page === 'articles' ? '/' : ''
 
   const navItems: NavItem[] = [
-    { label: 'אודות',        href: `${base}#about` },
-    { label: 'טיפולים',      href: `${base}#treatments` },
-    { label: 'שאלות נפוצות', href: `${base}#faq` },
-    { label: 'מאמרים',       href: 'articles.html' },
+    { label: 'אודות',              href: `${base}#about` },
+    { label: 'טיפולים',            href: `${base}#treatments` },
+    { label: 'שאלות נפוצות',       href: `${base}#faq` },
+    { label: 'מאמרים ומדריכים',    href: 'articles.html' },
   ]
 
   return (
