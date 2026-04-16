@@ -429,25 +429,52 @@ function FaqSection() {
 ══════════════════════════════════════════════════════════════ */
 const articlePreviews = [
   {
+    icon: '🦴',
     tag: 'כאב ותנועה',
     tagStyle: 'bg-red-50 text-red-600',
-    title: 'כאב גב וצוואר — מה הרפואה הסינית אומרת ואיך היא מטפלת',
-    desc:  'הבנת שורש הכאב הכרוני ודרכי הטיפול הקלאסיות',
-    href:  'articles.html',
+    title: 'כאב ותנועה',
+    desc: 'כאב גב, צוואר, כתפיים ופרקים — הבנת השורש וטיפול קלאסי שמחזיר את התנועה',
+    href: 'articles/article-back-pain.html',
   },
   {
+    icon: '🌙',
     tag: 'שינה וסטרס',
     tagStyle: 'bg-indigo-50 text-indigo-600',
-    title: 'סטרס ושינה — כיצד רפואה סינית מאזנת את מערכת העצבים',
-    desc:  'הקשר בין מתח, שינה ובריאות כוללת — ומה אפשר לעשות',
-    href:  'articles.html',
+    title: 'שינה וסטרס',
+    desc: 'מתח כרוני, חרדה והפרעות שינה — כיצד רפואה סינית מחזירה את האיזון למערכת העצבים',
+    href: 'articles/article-sleep.html',
   },
   {
+    icon: '🌿',
     tag: 'עיכול וחיסון',
     tagStyle: 'bg-emerald-50 text-emerald-700',
-    title: 'עיכול ואיזון — הקשר בין מעיים, חיסון ואנרגיה',
-    desc:  'כיצד מערכת העיכול משפיעה על כל הגוף ואיך לחזק אותה',
-    href:  'articles.html',
+    title: 'עיכול וחיסון',
+    desc: 'מעי רגיש, נפיחות, ריפלוקס ומחסות חלושה — הגישה הסינית לחיזוק הגוף מבפנים',
+    href: 'articles/article-allergies.html',
+  },
+  {
+    icon: '🌸',
+    tag: 'פריון ואישה',
+    tagStyle: 'bg-pink-50 text-pink-600',
+    title: 'פריון ואישה',
+    desc: 'תמיכה בפריון, איזון מחזור, גיל המעבר ובריאות הורמונלית לאורך כל שלבי החיים',
+    href: 'articles/article-fertility.html',
+  },
+  {
+    icon: '🧒',
+    tag: 'ילדים ועצבים',
+    tagStyle: 'bg-blue-50 text-blue-600',
+    title: 'ילדים ועצבים',
+    desc: 'טיפול עדין לילדים — קשיי שינה, כאבי בטן, חרדות ובעיות מערכת עצבים',
+    href: 'articles/article-stress.html',
+  },
+  {
+    icon: '✨',
+    tag: 'עור ופנים',
+    tagStyle: 'bg-yellow-50 text-yellow-700',
+    title: 'עור ופנים',
+    desc: 'אקנה, אקזמה, פסוריאזיס ועור יבש — הקשר בין עור לאיזון פנימי בראייה הסינית',
+    href: 'articles/article-sweating.html',
   },
 ]
 
@@ -462,44 +489,42 @@ function ArticlesPreviewSection() {
           className="mb-16 text-center"
         >
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">ידע ורפואה</p>
-          <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl">מאמרים מהמרפאה</h2>
-          <p className="mt-4 text-stone-500">מדריכים מעמיקים על רפואה סינית, הגוף, ובריאות כוללת</p>
+          <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl">מאמרים ומדריכים</h2>
+          <p className="mt-4 text-stone-500">מידע מעמיק על רפואה סינית קלאסית — מישירות מהמרפאה</p>
         </motion.div>
 
-        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {articlePreviews.map((a, i) => (
+        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {articlePreviews.map((p, i) => (
             <motion.li
-              key={a.title}
+              key={p.title}
               variants={fadeUp} initial="hidden" whileInView="show"
               viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.5, delay: i * 0.07 }}
             >
               <a
-                href={a.href}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-stone-900/5"
+                href={p.href}
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:border-amber-300 hover:shadow-md"
               >
-                <div className="h-1 bg-gradient-to-l from-amber-400 to-amber-600" />
-                <div className="flex flex-1 flex-col p-7">
-                  <span className={`mb-4 inline-block self-start rounded-full px-3 py-1 text-xs font-semibold ${a.tagStyle}`}>
-                    {a.tag}
-                  </span>
-                  <h3 className="flex-1 text-base font-bold text-stone-900 leading-snug">{a.title}</h3>
-                  <p className="mt-3 text-sm text-stone-500 leading-relaxed">{a.desc}</p>
-                  <span className="mt-5 flex items-center gap-1 text-xs font-semibold text-amber-700">
+                {/* Card body */}
+                <div className="flex flex-1 flex-col items-center px-6 pb-6 pt-5 text-center">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 border border-amber-100 text-2xl shadow-sm">
+                    {p.icon}
+                  </div>
+                  <h2 className="mt-3 text-lg font-bold text-foreground">
+                    {p.title}
+                  </h2>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
+                    {p.desc}
+                  </p>
+                  <a href={p.href} className="mt-5 flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-800 transition-colors">
                     <span>לקריאה</span>
                     <span className="transition-transform group-hover:-translate-x-0.5">←</span>
-                  </span>
+                  </a>
                 </div>
               </a>
             </motion.li>
           ))}
         </ul>
-
-        <div className="mt-12 text-center">
-          <Button asChild variant="outline" size="lg" className="rounded-2xl border-stone-300 text-stone-700 hover:bg-stone-50">
-            <a href="articles.html">כל המאמרים ←</a>
-          </Button>
-        </div>
       </div>
     </section>
   )
