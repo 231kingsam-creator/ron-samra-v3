@@ -485,60 +485,85 @@ const articlePreviews = [
 ]
 
 function ArticlesPreviewSection() {
+  // Show only the first 3 articles as a lightweight teaser
+  const teaser = articlePreviews.slice(0, 3)
+
   return (
-    <section id="articles" className="py-28">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="articles" className="py-20 bg-stone-50/40">
+      <div className="mx-auto max-w-5xl px-6">
+
+        {/* Section header */}
         <motion.div
           variants={fadeUp} initial="hidden" whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.5 }}
-          className="mb-16 text-center"
+          className="mb-10 flex flex-col items-center gap-3 text-center sm:flex-row sm:items-end sm:justify-between sm:text-start"
         >
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">ידע ורפואה</p>
-          <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl">מאמרים ומדריכים</h2>
-          <p className="mt-4 text-stone-500">מידע מעמיק על רפואה סינית קלאסית — מישירות מהמרפאה</p>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">ידע ורפואה</p>
+            <h2 className="mt-2 text-3xl font-bold text-stone-900 md:text-4xl">מאמרים ומדריכים</h2>
+          </div>
+          <a
+            href="articles.html"
+            className="shrink-0 text-sm font-semibold text-amber-700 hover:text-amber-800 underline-offset-4 hover:underline transition-colors"
+          >
+            לכל המאמרים ←
+          </a>
         </motion.div>
 
-        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {articlePreviews.map((p, i) => (
+        {/* 3-card teaser grid */}
+        <ul className="grid gap-4 sm:grid-cols-3">
+          {teaser.map((p, i) => (
             <motion.li
               key={p.title}
               variants={fadeUp} initial="hidden" whileInView="show"
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5, delay: i * 0.07 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.45, delay: i * 0.08 }}
             >
               <a
                 href={p.href}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:border-amber-300 hover:shadow-md"
+                className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-amber-200"
               >
-                {/* Cover image */}
-                <div className="relative h-44 w-full overflow-hidden bg-amber-50">
+                {/* Compact image */}
+                <div className="h-36 w-full overflow-hidden bg-stone-100">
                   <img
                     src={p.image}
                     alt={p.title}
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                {/* Card body */}
-                <div className="flex flex-1 flex-col items-center px-6 pb-6 pt-5 text-center">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 border border-amber-100 text-2xl shadow-sm">
-                    {p.icon}
-                  </div>
-                  <h2 className="mt-3 text-lg font-bold text-foreground">
+                {/* Minimal card body */}
+                <div className="flex flex-1 flex-col gap-2 p-4">
+                  <span className={cn('self-start rounded-full px-2.5 py-0.5 text-[10px] font-semibold', p.tagStyle)}>
+                    {p.tag}
+                  </span>
+                  <h3 className="text-sm font-bold text-stone-900 leading-snug">
                     {p.title}
-                  </h2>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
+                  </h3>
+                  <p className="text-xs text-stone-500 leading-relaxed line-clamp-2 flex-1">
                     {p.desc}
                   </p>
-                  <span className="mt-5 flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-800 transition-colors">
-                    <span>לקריאה</span>
-                    <span className="transition-transform group-hover:-translate-x-0.5">←</span>
+                  <span className="mt-1 text-xs font-semibold text-amber-700 group-hover:text-amber-800 transition-colors">
+                    לקריאה ←
                   </span>
                 </div>
               </a>
             </motion.li>
           ))}
         </ul>
+
+        {/* View all CTA */}
+        <motion.div
+          variants={fadeUp} initial="hidden" whileInView="show"
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-10 text-center"
+        >
+          <Button asChild variant="outline" size="lg" className="rounded-xl px-8 border-stone-300 text-stone-700 hover:border-amber-400 hover:text-amber-700">
+            <a href="articles.html">לכל המאמרים והמדריכים ←</a>
+          </Button>
+        </motion.div>
+
       </div>
     </section>
   )

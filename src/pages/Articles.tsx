@@ -9,6 +9,8 @@ const WA_LINK = 'https://wa.me/972523518103?text=היי, הגעתי דרך הא�
 const pillars = [
   {
     icon: '🦴',
+    tag: 'כאב ותנועה',
+    tagStyle: 'bg-red-50 text-red-700 border border-red-200',
     title: 'כאב ותנועה',
     desc: 'כאב גב, צוואר, כתפיים ופרקים — הבנת השורש וטיפול קלאסי שמחזיר את התנועה',
     href: 'articles/article-back-pain.html',
@@ -16,6 +18,8 @@ const pillars = [
   },
   {
     icon: '🌙',
+    tag: 'שינה וסטרס',
+    tagStyle: 'bg-indigo-50 text-indigo-700 border border-indigo-200',
     title: 'שינה וסטרס',
     desc: 'מתח כרוני, חרדה והפרעות שינה — כיצד רפואה סינית מחזירה את האיזון למערכת העצבים',
     href: 'articles/article-sleep.html',
@@ -23,6 +27,8 @@ const pillars = [
   },
   {
     icon: '🌿',
+    tag: 'עיכול וחיסון',
+    tagStyle: 'bg-emerald-50 text-emerald-700 border border-emerald-200',
     title: 'עיכול וחיסון',
     desc: 'מעי רגיש, נפיחות, ריפלוקס ומחסות חלושה — הגישה הסינית לחיזוק הגוף מבפנים',
     href: 'articles/article-allergies.html',
@@ -30,6 +36,8 @@ const pillars = [
   },
   {
     icon: '🌸',
+    tag: 'פריון ואישה',
+    tagStyle: 'bg-pink-50 text-pink-700 border border-pink-200',
     title: 'פריון ואישה',
     desc: 'תמיכה בפריון, איזון מחזור, גיל המעבר ובריאות הורמונלית לאורך כל שלבי החיים',
     href: 'articles/article-fertility.html',
@@ -37,6 +45,8 @@ const pillars = [
   },
   {
     icon: '🧒',
+    tag: 'ילדים ועצבים',
+    tagStyle: 'bg-blue-50 text-blue-700 border border-blue-200',
     title: 'ילדים ועצבים',
     desc: 'טיפול עדין לילדים — קשיי שינה, כאבי בטן, חרדות ובעיות מערכת עצבים',
     href: 'articles/article-stress.html',
@@ -44,6 +54,8 @@ const pillars = [
   },
   {
     icon: '✨',
+    tag: 'עור ופנים',
+    tagStyle: 'bg-yellow-50 text-yellow-700 border border-yellow-200',
     title: 'עור ופנים',
     desc: 'אקנה, אקזמה, פסוריאזיס ועור יבש — הקשר בין עור לאיזון פנימי בראייה הסינית',
     href: 'articles/article-sweating.html',
@@ -56,8 +68,8 @@ export default function Articles() {
     <>
       <Header page="articles" />
 
-      {/* Page hero */}
-      <section className="bg-stone-900 pt-32 pb-16 text-center">
+      {/* Page hero — dark, prominent */}
+      <section className="bg-stone-900 pt-32 pb-20 text-center">
         <div className="mx-auto max-w-3xl px-6">
           <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
             ידע ורפואה
@@ -65,43 +77,55 @@ export default function Articles() {
           <h1 className="mt-3 text-4xl font-bold text-white md:text-5xl">
             מאמרים ומדריכים
           </h1>
-          <p className="mt-4 text-lg font-light text-stone-300">
+          <p className="mt-4 text-lg font-light text-stone-300 max-w-xl mx-auto">
             מידע מעמיק על רפואה סינית קלאסית — מישירות מהמרפאה
           </p>
+          {/* Article count badge */}
+          <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm text-stone-300">
+            <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
+            {pillars.length} נושאים זמינים לקריאה
+          </div>
         </div>
       </section>
 
+      {/* Archive grid */}
       <main className="py-16 bg-background">
         <div className="mx-auto max-w-6xl px-6">
-          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {pillars.map((p) => (
               <li key={p.title}>
                 <a
                   href={p.href}
-                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:border-amber-300 hover:shadow-md"
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-amber-300 hover:shadow-lg"
                 >
-                  {/* Cover image */}
-                  <div className="relative h-44 w-full overflow-hidden bg-amber-50">
+                  {/* Tall cover image */}
+                  <div className="relative h-52 w-full overflow-hidden bg-stone-100">
                     <img
                       src={p.image}
                       alt={p.title}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="h-full w-full object-cover transition-transform duration-400 group-hover:scale-105"
                     />
+                    {/* Category tag — overlaid on image */}
+                    <span className={`absolute bottom-3 end-3 rounded-full px-3 py-1 text-[11px] font-semibold shadow-sm ${p.tagStyle} bg-white/90 backdrop-blur-sm`}>
+                      {p.tag}
+                    </span>
                   </div>
-                  {/* Card body */}
-                  <div className="flex flex-1 flex-col items-center px-6 pb-6 pt-5 text-center">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 border border-amber-100 text-2xl shadow-sm">
-                      {p.icon}
-                    </div>
-                    <h2 className="mt-3 text-lg font-bold text-foreground">
+
+                  {/* Card body — archive style */}
+                  <div className="flex flex-1 flex-col p-5 gap-3">
+                    <h2 className="text-base font-bold text-foreground leading-snug group-hover:text-amber-800 transition-colors">
                       {p.title}
                     </h2>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
                       {p.desc}
                     </p>
-                    <span className="mt-4 text-sm font-bold text-amber-600">
-                      לקריאה ←
-                    </span>
+                    <div className="pt-2 border-t border-border flex items-center justify-between">
+                      <span className="text-sm font-semibold text-amber-700 group-hover:text-amber-800 transition-colors flex items-center gap-1">
+                        קראו את המאמר
+                        <span className="transition-transform duration-200 group-hover:-translate-x-0.5">←</span>
+                      </span>
+                      <span className="text-xl">{p.icon}</span>
+                    </div>
                   </div>
                 </a>
               </li>
