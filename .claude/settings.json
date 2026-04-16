@@ -4,7 +4,11 @@
       "Bash(npx tsc *)",
       "Bash(npm run *)",
       "Bash(node_modules/.bin/tsc --noEmit)",
-      "Bash(./node_modules/.bin/tsc --noEmit)"
+      "Bash(./node_modules/.bin/tsc --noEmit)",
+      "WebFetch(domain:ron-samra-sitex.pages.dev)",
+      "Bash(ls -la d:/ron-samra-v3/articles/*.html d:/ron-samra-v3/articles.json)",
+      "Bash(cp articles/article-*.html public/articles/)",
+      "Bash(cp articles/article.css public/articles/)"
     ]
   }
 }

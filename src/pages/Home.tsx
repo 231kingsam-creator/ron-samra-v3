@@ -72,14 +72,8 @@ function HeroSection() {
                   שלחו הודעה בוואטסאפ לקביעת תור
                 </a>
               </Button>
-              <Button
-                asChild size="lg" variant="ghost"
-                className="rounded-2xl px-8 py-7 text-base text-stone-600 hover:bg-stone-100"
-              >
-                <a href="#treatments">למי זה מתאים? ←</a>
-              </Button>
             </div>
-            <p className="mt-3 text-xs text-stone-400 text-center lg:text-start">מענה אישי, ללא התחייבות</p>
+            <p className="mt-4 text-sm font-medium text-stone-500 text-center lg:text-start">מענה אישי, ללא התחייבות</p>
           </motion.div>
 
           {/* Image */}
