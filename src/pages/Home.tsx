@@ -460,52 +460,58 @@ function FaqSection() {
 ══════════════════════════════════════════════════════════════ */
 const articlePreviews = [
   {
+    icon: '🦴',
     tag: 'כאב ותנועה',
     tagStyle: 'bg-red-50 text-red-600',
     title: 'כאב ותנועה',
     desc: 'כאב גב, צוואר, כתפיים ופרקים — הבנת השורש וטיפול קלאסי שמחזיר את התנועה',
     href: 'articles/article-back-pain.html',
-    image: '/images/topics/back-pain.jpg',
+    image: '/images/article/article-headache.png',
   },
   {
+    icon: '🌙',
     tag: 'שינה וסטרס',
     tagStyle: 'bg-indigo-50 text-indigo-600',
     title: 'שינה וסטרס',
     desc: 'מתח כרוני, חרדה והפרעות שינה — כיצד רפואה סינית מחזירה את האיזון למערכת העצבים',
     href: 'articles/article-sleep.html',
-    image: '/images/topics/stress.jpg',
+    image: '/images/article/article-sleep.png',
   },
   {
+    icon: '🌿',
     tag: 'עיכול וחיסון',
     tagStyle: 'bg-emerald-50 text-emerald-700',
     title: 'עיכול וחיסון',
     desc: 'מעי רגיש, נפיחות, ריפלוקס ומחסות חלושה — הגישה הסינית לחיזוק הגוף מבפנים',
     href: 'articles/article-allergies.html',
-    image: '/images/topics/sleep.jpg',
+    image: '/images/article/article-allergies.png',
   },
   {
+    icon: '🌸',
     tag: 'פריון ואישה',
     tagStyle: 'bg-pink-50 text-pink-600',
     title: 'פריון ואישה',
     desc: 'תמיכה בפריון, איזון מחזור, גיל המעבר ובריאות הורמונלית לאורך כל שלבי החיים',
     href: 'articles/article-fertility.html',
-    image: '/images/topics/hormones.jpg',
+    image: '/images/article/article-fertility.png',
   },
   {
+    icon: '🧒',
     tag: 'ילדים ועצבים',
     tagStyle: 'bg-blue-50 text-blue-600',
     title: 'ילדים ועצבים',
     desc: 'טיפול עדין לילדים — קשיי שינה, כאבי בטן, חרדות ובעיות מערכת עצבים',
     href: 'articles/article-stress.html',
-    image: '/images/topics/checkup.jpg',
+    image: '/images/article/article-gynecology.png',
   },
   {
+    icon: '✨',
     tag: 'עור ופנים',
     tagStyle: 'bg-yellow-50 text-yellow-700',
     title: 'עור ופנים',
     desc: 'אקנה, אקזמה, פסוריאזיס ועור יבש — הקשר בין עור לאיזון פנימי בראייה הסינית',
     href: 'articles/article-sweating.html',
-    image: '/images/topics/fatigue.jpg',
+    image: '/images/article/article-sweating.png',
   },
 ]
 
@@ -549,8 +555,8 @@ function ArticlesPreviewSection() {
                 href={p.href}
                 className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-amber-200"
               >
-                {/* Cover image */}
-                <div className="h-[200px] w-full overflow-hidden bg-stone-100">
+                {/* Compact image */}
+                <div className="h-36 w-full overflow-hidden bg-stone-100">
                   <img
                     src={p.image}
                     alt={p.title}
