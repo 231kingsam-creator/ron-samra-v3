@@ -39,7 +39,7 @@ export function AccessibilityWidget() {
     <>
       {/* Global a11y styles injected via <style> */}
       <style>{`
-        .a11y-big-text      { font-size: 120% !important; }
+        .a11y-big-text      { font-size: 140% !important; }
         .a11y-high-contrast { filter: contrast(150%) !important; }
         .a11y-grayscale     { filter: grayscale(100%) !important; }
         .a11y-underline  a  { text-decoration: underline !important; }
