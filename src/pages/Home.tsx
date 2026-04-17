@@ -198,6 +198,66 @@ function TreatmentsSection() {
 
 
 /* ══════════════════════════════════════════════════════════════
+   4. WHY CHOOSE / למה מטופלים בוחרים להגיע אליי
+══════════════════════════════════════════════════════════════ */
+function WhyChooseSection() {
+  return (
+    <section className="py-28 bg-white">
+      <div className="mx-auto max-w-3xl px-6">
+
+        <motion.div
+          variants={fadeUp} initial="hidden" whileInView="show"
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">הגישה שלי</p>
+          <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl leading-tight">
+            למה מטופלים בוחרים להגיע אליי
+          </h2>
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp} initial="hidden" whileInView="show"
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mt-12 space-y-6 text-stone-600 leading-relaxed text-base text-center"
+        >
+          <p>מעל 35 שנות ניסיון ברפואה סינית, עם הכשרה בינלאומית בלונדון.</p>
+          <p>
+            בקליניקה אני עובד בגישה אישית ומדויקת,<br />
+            שמתמקדת בשורש הבעיה — לא רק בהקלה זמנית.
+          </p>
+          <p>
+            השילוב בין דיקור סיני, תזונה וכלים טיפוליים נוספים<br />
+            מאפשר לגוף לחזור לאיזון בצורה טבעית ונכונה.
+          </p>
+          <p>
+            הקליניקה ממוקמת במודיעין, ומלווה מטופלים בתהליכים<br />
+            של הקלה, איזון ושיפור איכות החיים.
+          </p>
+        </motion.div>
+
+        {/* Testimonials placeholder */}
+        <motion.div
+          variants={fadeUp} initial="hidden" whileInView="show"
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-16 rounded-2xl border border-stone-200 bg-stone-50 px-8 py-10 text-center"
+        >
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">ביקורות</p>
+          <h3 className="mt-2 text-2xl font-bold text-stone-900">מטופלים משתפים</h3>
+          <p className="mt-4 text-stone-400 text-sm">
+            בקרוב יתווספו כאן חוויות של מטופלים מהקליניקה.
+          </p>
+        </motion.div>
+
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════════════════
    5. ABOUT / למה לבחור בי?
 ══════════════════════════════════════════════════════════════ */
 function AboutSection() {
@@ -729,6 +789,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <TreatmentsSection />
+        <WhyChooseSection />
         <AboutSection />
         <TestimonialsSection />
         <FaqSection />
