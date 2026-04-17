@@ -46,40 +46,6 @@
   --ring: oklch(0.62 0.15 60);
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
-  100% { transform: scale(1); }
-}
-
-@media (max-width: 768px) {
-  .mobile-sticky-cta {
-    position: fixed;
-    bottom: 12px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    z-index: 9999;
-    padding: 0 12px;
-  }
-
-  .mobile-sticky-cta a {
-    width: 100%;
-    max-width: 420px;
-    background: #25D366;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    border-radius: 999px;
-    font-size: 17px;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    animation: pulse 2.5s infinite;
-  }
-}
-
 @layer base {
   * {
     @apply border-border;

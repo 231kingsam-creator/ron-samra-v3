@@ -740,11 +740,6 @@ export default function Home() {
       <Footer />
       <FloatingWhatsApp />
       <AccessibilityWidget />
-      <div className="mobile-sticky-cta">
-        <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-          💬 נדבר רגע ונבדוק אם זה מתאים לך
-        </a>
-      </div>
     </>
   )
 }
