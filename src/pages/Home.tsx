@@ -746,9 +746,10 @@ function CtaSection() {
           <h2 className="text-4xl font-bold text-white md:text-5xl leading-tight">
             מוכנים להתחיל?
           </h2>
-          <p className="mt-5 text-lg text-stone-400 max-w-xl mx-auto leading-relaxed">
-            שלחו הודעה קצרה בוואטסאפ — אחזור אליכם תוך שעות ספורות לתיאום פגישת ייעוץ ראשונה.
-          </p>
+          <div className="mt-5 max-w-xl mx-auto space-y-3 text-lg text-stone-400 leading-relaxed">
+            <p>שלחו הודעה קצרה בוואטסאפ — ואחזור אליכם אישית בהקדם.</p>
+            <p>אפשר לכתוב בקצרה מה מפריע לכם,<br />ואבדוק יחד אתכם איך אפשר לעזור.</p>
+          </div>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row justify-center">
             <Button
@@ -756,8 +757,7 @@ function CtaSection() {
               className="rounded-2xl px-10 py-7 text-base font-semibold bg-gradient-to-l from-amber-500 to-amber-400 hover:from-amber-600 hover:to-amber-500 text-stone-900 border-0 shadow-xl shadow-amber-500/20"
             >
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                <WaIcon />
-                התייעצות חינם בוואטסאפ
+                💬 התייעצות קצרה בוואטסאפ
               </a>
             </Button>
             <Button
@@ -768,7 +768,9 @@ function CtaSection() {
             </Button>
           </div>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-stone-500">
+          <p className="mt-5 text-sm text-stone-500">מענה אישי · ללא התחייבות</p>
+
+          <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-stone-500">
             <span>📍 מודיעין מכבים רעות</span>
             <span>🕘 ראשון–חמישי 09:00–19:00</span>
             <span>📞 052-351-8103</span>
