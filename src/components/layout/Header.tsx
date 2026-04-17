@@ -50,7 +50,7 @@ export function Header({ page = 'home' }: HeaderProps) {
                   רון סמרה
                 </span>
                 <span className="text-xs font-semibold tracking-wider text-primary">
-                  רפואה סינית
+                  רפואה סינית · מודיעין
                 </span>
               </a>
 
