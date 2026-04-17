@@ -202,14 +202,6 @@ function TreatmentsSection() {
    5. ABOUT / למה לבחור בי?
 ══════════════════════════════════════════════════════════════ */
 function AboutSection() {
-  const credentials = [
-    'B.Ac. Lic. Ac — קולג\' בינלאומי לרפואה סינית, לונדון',
-    'חבר באיגוד הבריטי לרפואה סינית (B.Ac.C)',
-    'ממקימי האגודה לרפואה סינית בישראל (1995)',
-    'מרצה באוניברסיטה העברית (2005–2021)',
-    'מטפל מוסמך בכללית משלימה (מ-1997)',
-  ]
-
   return (
     <section id="about" className="py-28 bg-stone-50/50">
       <div className="mx-auto max-w-6xl px-6">
@@ -247,29 +239,57 @@ function AboutSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="order-1 md:order-2"
           >
+            {/* PART 1 – Conversion intro */}
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">אודות</p>
             <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl leading-tight">
               למה לבחור בי?<br />
               <span className="text-amber-700">כי טיפול טוב מתחיל בהקשבה</span>
             </h2>
 
-            <blockquote className="my-8 border-s-2 border-amber-400 ps-5">
-              <p className="font-['Frank_Ruhl_Libre'] text-xl italic text-stone-600 leading-relaxed">
-                "אני רון סמרה, מטפל ברפואה סינית עם ניסיון של מעל 35 שנה. לאורך השנים ליוויתי מטופלים רבים עם כאב, סטרס, בעיות שינה וחוסר איזון — כל אחד עם הסיפור שלו."
-              </p>
-            </blockquote>
-
-            <div className="space-y-3.5 text-stone-600 leading-relaxed">
-              <p>כילד גדלתי בצל הרפואה: אבי היה רופא בכיר בתל השומר. נחשפתי להתרגשות ולעבודתו המסורה של אדם שמצליח לעזור לאחרים ולתת תקווה. רציתי לעסוק ברפואה.</p>
-              <p>דרכי הובילה אותי ללונדון, שם למדתי רפואה סינית בקולג' הבינלאומי לרפואה סינית (I.C.O.M) — המוביל באירופה. 4 שנות לימוד ו-3 שנות עבודה כמנחה קליני.</p>
-              <p>הגישה שלי פשוטה: לא רק לטפל בסימפטום — אלא להבין מה עומד מאחוריו. כל טיפול מותאם אישית, בקצב שנכון לך, ובמטרה להחזיר את הגוף לאיזון.</p>
-              <p>אני מאמין בטיפול מדויק, קשוב ולא אגרסיבי — כזה שהגוף יכול לקבל ולהגיב אליו. בעבודתי אני משלב דיקור סיני, טווינה, מוקסה, כוסות רוח וייעוץ תזונתי.</p>
+            <div className="mt-7 space-y-3.5 text-stone-600 leading-relaxed">
+              <p>רוב האנשים שמגיעים אליי כבר ניסו דברים שלא באמת פתרו את הבעיה.<br />כאב שלא עובר, סטרס מתמשך או שינה לא מאוזנת.</p>
+              <p>אני רון סמרה, מטפל ברפואה סינית עם ניסיון של מעל 35 שנה.<br />בקליניקה אני עובד בגישה אישית שמכוונת לשורש הבעיה —<br />כדי להחזיר לגוף איזון, הקלה ואיכות חיים.</p>
             </div>
 
-            <ul className="mt-7 space-y-2.5">
-              {credentials.map((c) => (
+            <ul className="mt-5 space-y-2">
+              {['דיקור סיני ורפואה סינית', 'התאמה אישית לכל מטופל', 'הסתכלות עמוקה על הגוף והנפש'].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm">
+                  <span className="mt-0.5 shrink-0 font-bold text-amber-600">✔</span>
+                  <span className="text-stone-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block text-sm font-medium text-amber-700 hover:text-amber-800 transition-colors"
+            >
+              💬 לא בטוחים אם זה מתאים? אפשר לדבר איתי בוואטסאפ.
+            </a>
+
+            {/* PART 2 – Personal story */}
+            <p className="mt-10 text-xs font-bold uppercase tracking-[0.25em] text-amber-600">קצת עליי</p>
+
+            <div className="mt-4 space-y-3.5 text-stone-600 leading-relaxed">
+              <p>שמי רון סמרה, ואני מטפל ברפואה סינית עם ניסיון של מעל 35 שנה.</p>
+              <p>לאורך השנים ליוויתי מטופלים רבים עם כאבים, סטרס ובעיות איזון —<br />כאשר כל אחד מהם הגיע עם סיפור שונה ודרך שונה.</p>
+              <p>החיבור שלי לרפואה התחיל כבר בילדות, מתוך רצון לעזור לאנשים<br />וליצור שינוי אמיתי באיכות החיים שלהם.</p>
+              <p>למדתי רפואה סינית בקולג' הבינלאומי (I.C.O.M) באנגליה,<br />ולאחר מכן המשכתי שנים של עבודה קלינית מעשית.</p>
+              <p>הגישה שלי היום מתמקדת לא רק בהקלה סימפטומטית,<br />אלא בהבנה עמוקה של שורש הבעיה והתאמה אישית לכל מטופל.</p>
+              <p>אני משלב דיקור סיני, תזונה, מגע וכלים נוספים<br />כדי לעזור לגוף לחזור לאיזון בצורה טבעית ונכונה.</p>
+            </div>
+
+            <ul className="mt-6 space-y-2.5">
+              {[
+                'B.Ac Lic Ac – קולג\' בינלאומי לרפואה סינית, לונדון',
+                'חבר באיגוד הבריטי לרפואה סינית',
+                'מעל 35 שנות ניסיון',
+                'קליניקה במודיעין',
+              ].map((c) => (
                 <li key={c} className="flex items-start gap-3 text-sm">
-                  <span className="mt-0.5 shrink-0 font-bold text-amber-600">✓</span>
+                  <span className="mt-0.5 shrink-0 font-bold text-amber-600">✔</span>
                   <span className="text-stone-700">{c}</span>
                 </li>
               ))}
@@ -440,58 +460,52 @@ function FaqSection() {
 ══════════════════════════════════════════════════════════════ */
 const articlePreviews = [
   {
-    icon: '🦴',
     tag: 'כאב ותנועה',
     tagStyle: 'bg-red-50 text-red-600',
     title: 'כאב ותנועה',
     desc: 'כאב גב, צוואר, כתפיים ופרקים — הבנת השורש וטיפול קלאסי שמחזיר את התנועה',
     href: 'articles/article-back-pain.html',
-    image: '/images/article/article-headache.png',
+    image: '/images/topics/back-pain.jpg',
   },
   {
-    icon: '🌙',
     tag: 'שינה וסטרס',
     tagStyle: 'bg-indigo-50 text-indigo-600',
     title: 'שינה וסטרס',
     desc: 'מתח כרוני, חרדה והפרעות שינה — כיצד רפואה סינית מחזירה את האיזון למערכת העצבים',
     href: 'articles/article-sleep.html',
-    image: '/images/article/article-sleep.png',
+    image: '/images/topics/stress.jpg',
   },
   {
-    icon: '🌿',
     tag: 'עיכול וחיסון',
     tagStyle: 'bg-emerald-50 text-emerald-700',
     title: 'עיכול וחיסון',
     desc: 'מעי רגיש, נפיחות, ריפלוקס ומחסות חלושה — הגישה הסינית לחיזוק הגוף מבפנים',
     href: 'articles/article-allergies.html',
-    image: '/images/article/article-allergies.png',
+    image: '/images/topics/sleep.jpg',
   },
   {
-    icon: '🌸',
     tag: 'פריון ואישה',
     tagStyle: 'bg-pink-50 text-pink-600',
     title: 'פריון ואישה',
     desc: 'תמיכה בפריון, איזון מחזור, גיל המעבר ובריאות הורמונלית לאורך כל שלבי החיים',
     href: 'articles/article-fertility.html',
-    image: '/images/article/article-fertility.png',
+    image: '/images/topics/hormones.jpg',
   },
   {
-    icon: '🧒',
     tag: 'ילדים ועצבים',
     tagStyle: 'bg-blue-50 text-blue-600',
     title: 'ילדים ועצבים',
     desc: 'טיפול עדין לילדים — קשיי שינה, כאבי בטן, חרדות ובעיות מערכת עצבים',
     href: 'articles/article-stress.html',
-    image: '/images/article/article-gynecology.png',
+    image: '/images/topics/checkup.jpg',
   },
   {
-    icon: '✨',
     tag: 'עור ופנים',
     tagStyle: 'bg-yellow-50 text-yellow-700',
     title: 'עור ופנים',
     desc: 'אקנה, אקזמה, פסוריאזיס ועור יבש — הקשר בין עור לאיזון פנימי בראייה הסינית',
     href: 'articles/article-sweating.html',
-    image: '/images/article/article-sweating.png',
+    image: '/images/topics/fatigue.jpg',
   },
 ]
 
@@ -535,8 +549,8 @@ function ArticlesPreviewSection() {
                 href={p.href}
                 className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-amber-200"
               >
-                {/* Compact image */}
-                <div className="h-36 w-full overflow-hidden bg-stone-100">
+                {/* Cover image */}
+                <div className="h-[200px] w-full overflow-hidden bg-stone-100">
                   <img
                     src={p.image}
                     alt={p.title}
