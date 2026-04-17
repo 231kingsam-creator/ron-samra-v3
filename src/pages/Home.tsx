@@ -49,18 +49,17 @@ function HeroSection() {
           >
 
             <h1 className="text-3xl font-bold leading-snug text-stone-900 md:text-4xl xl:text-5xl">
-              להחזיר את הגוף לאיזון<br />
+              כאב שלא עובר?<br />
               <span className="bg-gradient-to-l from-amber-700 via-amber-600 to-amber-500 bg-clip-text text-transparent">
-                — ולהרגיש טוב יותר ביומיום
+                סטרס שמלווה אותך ביום־יום?
               </span>
             </h1>
 
             <p className="mx-auto mt-6 max-w-lg text-xl font-light leading-relaxed text-stone-600 lg:mx-0">
-              רפואה סינית עתיקה ומסורתית במודיעין<br />
-              עם טיפול אישי, קשוב ומדויק
+              טיפול שמכוון לשורש הבעיה — לא רק להקלה זמנית
             </p>
-            <p className="mt-2 text-sm text-stone-400">ניסיון של מעל 35 שנה בליווי מטופלים</p>
-            <p className="mt-1 text-sm text-stone-400">בהפחתת כאב, סטרס ושיפור השינה — טיפול שמגיע לשורש הבעיה</p>
+            <p className="mt-2 text-sm text-stone-400">רפואה סינית מדויקת ומסורתית במודיעין<br />עם ניסיון של מעל 35 שנה וליווי אישי לכל מטופל</p>
+            <p className="mt-1 text-sm text-stone-400">✔ 35+ שנות ניסיון · ✔ קליניקה במודיעין · ✔ מתאים גם אם ניסית טיפולים אחרים</p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row justify-center lg:justify-start">
               <Button
@@ -69,7 +68,7 @@ function HeroSection() {
               >
                 <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
                   <WaIcon />
-                  שלחו הודעה בוואטסאפ לקביעת תור
+                  💬 בדיקה אישית קצרה בוואטסאפ
                 </a>
               </Button>
             </div>
