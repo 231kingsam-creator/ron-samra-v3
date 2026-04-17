@@ -46,6 +46,12 @@
   --ring: oklch(0.62 0.15 60);
 }
 
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
 @media (max-width: 768px) {
   .mobile-sticky-cta {
     position: fixed;
@@ -70,6 +76,7 @@
     font-weight: 600;
     text-decoration: none;
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    animation: pulse 2.5s infinite;
   }
 }
 
