@@ -46,6 +46,46 @@
   --ring: oklch(0.62 0.15 60);
 }
 
+/* ── Hero mobile spacing refinements ────────────────────────── */
+@media (max-width: 768px) {
+  /* Don't force full viewport height — avoids huge empty gap on mobile */
+  main > section:first-of-type {
+    min-height: unset;
+  }
+
+  /* Reduce top padding (was pt-28 = 7rem) and bottom padding */
+  main > section:first-of-type > div:first-child {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Tighten gap between image block and text block (was gap-12 = 3rem) */
+  main > section:first-of-type > div > div {
+    gap: 1.5rem;
+  }
+
+  /* Cap image container height so it doesn't dominate the screen */
+  main > section:first-of-type .aspect-square,
+  main > section:first-of-type [style*="aspect"] {
+    max-height: 340px;
+  }
+
+  /* Tighten spacing between sub-headline and supporting lines */
+  main > section:first-of-type p + p {
+    margin-top: 0.5rem;
+  }
+
+  /* Reduce CTA button row top margin */
+  main > section:first-of-type .mt-10 {
+    margin-top: 1.5rem;
+  }
+
+  /* Reduce trailing trust line margin */
+  main > section:first-of-type .mt-4 {
+    margin-top: 0.75rem;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
