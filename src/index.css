@@ -49,9 +49,11 @@
 /* ── WhyChoose subtitle mobile ───────────────────────────────── */
 @media (max-width: 768px) {
   .why-subtitle {
-    font-size: 24px;
+    font-size: 20px;
     color: red;
     white-space: nowrap;
+    overflow: visible;
+    padding-inline: 0;
   }
 }
 
