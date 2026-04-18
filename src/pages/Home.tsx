@@ -179,7 +179,7 @@ function TreatmentsSection() {
           className="mt-14 text-center"
         >
           <p className="mb-2 text-base font-semibold text-stone-700">מזהים את עצמכם?</p>
-          <p className="mb-6 text-sm text-stone-500">שלחו הודעה קצרה — נשמח לשמוע ולבדוק יחד איך אפשר לעזור.</p>
+          <p className="mb-6 text-sm text-stone-500">שלחו הודעה קצרה — אשמח לשמוע ולבדוק יחד איך אפשר לעזור.</p>
           <Button
             asChild size="lg"
             className="rounded-2xl bg-gradient-to-l from-amber-600 to-amber-500 hover:from-amber-700 hover:to-amber-600 text-white border-0 shadow-lg shadow-amber-500/20"
