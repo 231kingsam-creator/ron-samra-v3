@@ -223,7 +223,7 @@ function WhyChooseSection() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-12 space-y-6 text-stone-600 leading-relaxed text-base text-center"
         >
-          <p className="text-xl font-semibold text-stone-800">כי טיפול טוב מתחיל בהקשבה</p>
+          <p className="why-subtitle text-xl font-semibold text-stone-800">כי טיפול טוב מתחיל בהקשבה</p>
           <p>
             רוב האנשים שמגיעים אליי כבר ניסו דברים שלא באמת פתרו את הבעיה.<br />
             כאב שלא עובר, סטרס מתמשך או שינה לא מאוזנת.

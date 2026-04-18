@@ -46,6 +46,15 @@
   --ring: oklch(0.62 0.15 60);
 }
 
+/* ── WhyChoose subtitle mobile ───────────────────────────────── */
+@media (max-width: 768px) {
+  .why-subtitle {
+    font-size: 24px;
+    color: red;
+    white-space: nowrap;
+  }
+}
+
 /* ── Hero mobile spacing refinements ────────────────────────── */
 @media (max-width: 768px) {
   /* Don't force full viewport height — avoids huge empty gap on mobile */
