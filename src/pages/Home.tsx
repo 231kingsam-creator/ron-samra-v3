@@ -94,11 +94,6 @@ function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-stone-900/20 via-transparent to-transparent" />
             </div>
 
-            {/* Floating credential card */}
-            <div className="absolute bottom-6 -start-3 rounded-2xl border border-stone-100 bg-white/95 p-4 shadow-xl backdrop-blur-sm">
-              <div className="font-['Frank_Ruhl_Libre'] text-2xl font-bold text-amber-700">35+</div>
-              <div className="mt-0.5 text-xs text-stone-500">שנות ניסיון קליני</div>
-            </div>
           </motion.div>
 
         </div>
