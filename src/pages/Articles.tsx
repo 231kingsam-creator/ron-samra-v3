@@ -78,7 +78,7 @@ export default function Articles() {
             מאמרים ומדריכים
           </h1>
           <p className="mt-4 text-lg font-light text-stone-300 max-w-xl mx-auto">
-            מידע מעמיק על רפואה סינית קלאסית — מישירות מהמרפאה
+            מידע מעמיק על רפואה סינית קלאסית — ישירות מהמרפאה
           </p>
           {/* Article count badge */}
           <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm text-stone-300">
