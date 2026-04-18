@@ -330,12 +330,6 @@ function AboutSection() {
               ))}
             </ul>
 
-            <div className="diplomas mt-8">
-              <img src="/images/diplomas/diploma1.jpg.jpeg" alt="תעודה 1" />
-              <img src="/images/diplomas/diploma2.jpg.jpeg" alt="תעודה 2" />
-              <img src="/images/diplomas/diploma3.jpg.jpeg" alt="תעודה 3" />
-            </div>
-
             <div className="mt-9">
               <Button
                 asChild size="lg"
@@ -775,6 +769,13 @@ export default function Home() {
         <TreatmentsSection />
         <WhyChooseSection />
         <AboutSection />
+        <div className="mx-auto max-w-6xl px-6 pb-8">
+          <div className="diplomas">
+            <img src="/images/diplomas/diploma1.jpg.jpeg" alt="תעודה 1" />
+            <img src="/images/diplomas/diploma2.jpg.jpeg" alt="תעודה 2" />
+            <img src="/images/diplomas/diploma3.jpg.jpeg" alt="תעודה 3" />
+          </div>
+        </div>
         <TestimonialsSection />
         <FaqSection />
         <ArticlesPreviewSection />

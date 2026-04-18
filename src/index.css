@@ -53,6 +53,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     align-items: center;
+    margin: 16px 0;
   }
 
   .diplomas img {
