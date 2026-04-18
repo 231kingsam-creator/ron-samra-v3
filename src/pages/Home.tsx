@@ -330,6 +330,12 @@ function AboutSection() {
               ))}
             </ul>
 
+            <div className="diplomas mt-8">
+              <img src="/images/diplomas/diploma1.jpg.jpeg" alt="תעודה 1" />
+              <img src="/images/diplomas/diploma2.jpg.jpeg" alt="תעודה 2" />
+              <img src="/images/diplomas/diploma3.jpg.jpeg" alt="תעודה 3" />
+            </div>
+
             <div className="mt-9">
               <Button
                 asChild size="lg"
