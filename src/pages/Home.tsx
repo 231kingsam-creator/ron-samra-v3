@@ -505,9 +505,9 @@ const articlePreviews = [
   },
   {
     icon: '🌙',
-    tag: 'שינה וסטרס',
+    tag: 'בעיות שינה',
     tagStyle: 'bg-indigo-50 text-indigo-600',
-    title: 'שינה וסטרס',
+    title: 'בעיות שינה',
     desc: 'מתח כרוני, חרדה והפרעות שינה — כיצד רפואה סינית מחזירה את האיזון למערכת העצבים',
     href: 'articles/article-sleep.html',
     image: '/images/article/article-sleep.png',
