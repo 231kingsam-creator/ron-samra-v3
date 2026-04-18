@@ -302,38 +302,7 @@ function AboutSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="order-1 md:order-2"
           >
-            {/* PART 1 – Conversion intro */}
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">אודות</p>
-            <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl leading-tight">
-              למה לבחור בי?<br />
-              <span className="text-amber-700">כי טיפול טוב מתחיל בהקשבה</span>
-            </h2>
-
-            <div className="mt-7 space-y-3.5 text-stone-600 leading-relaxed">
-              <p>רוב האנשים שמגיעים אליי כבר ניסו דברים שלא באמת פתרו את הבעיה.<br />כאב שלא עובר, סטרס מתמשך או שינה לא מאוזנת.</p>
-              <p>אני רון סמרה, מטפל ברפואה סינית עם ניסיון של מעל 35 שנה.<br />בקליניקה אני עובד בגישה אישית שמכוונת לשורש הבעיה —<br />כדי להחזיר לגוף איזון, הקלה ואיכות חיים.</p>
-            </div>
-
-            <ul className="mt-5 space-y-2">
-              {['דיקור סיני ורפואה סינית', 'התאמה אישית לכל מטופל', 'הסתכלות עמוקה על הגוף והנפש'].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm">
-                  <span className="mt-0.5 shrink-0 font-bold text-amber-600">✔</span>
-                  <span className="text-stone-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block text-sm font-medium text-amber-700 hover:text-amber-800 transition-colors"
-            >
-              💬 לא בטוחים אם זה מתאים? אפשר לדבר איתי בוואטסאפ.
-            </a>
-
-            {/* PART 2 – Personal story */}
-            <p className="mt-10 text-xs font-bold uppercase tracking-[0.25em] text-amber-600">קצת עליי</p>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">קצת עליי</p>
 
             <div className="mt-4 space-y-3.5 text-stone-600 leading-relaxed">
               <p>שמי רון סמרה, ואני מטפל ברפואה סינית עם ניסיון של מעל 35 שנה.</p>
