@@ -302,7 +302,10 @@ function AboutSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="order-1 md:order-2"
           >
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">קצת עליי</p>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">אודות</p>
+            <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl leading-tight">
+              קצת עליי
+            </h2>
 
             <div className="mt-4 space-y-3.5 text-stone-600 leading-relaxed">
               <p>שמי רון סמרה, ואני מטפל ברפואה סינית עם ניסיון של מעל 35 שנה.</p>
