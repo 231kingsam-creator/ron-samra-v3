@@ -223,19 +223,23 @@ function WhyChooseSection() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-12 space-y-6 text-stone-600 leading-relaxed text-base text-center"
         >
-          <p>מעל 35 שנות ניסיון ברפואה סינית, עם הכשרה בינלאומית בלונדון.</p>
+          <p className="text-xl font-semibold text-stone-800">כי טיפול טוב מתחיל בהקשבה</p>
           <p>
-            בקליניקה אני עובד בגישה אישית ומדויקת,<br />
-            שמתמקדת בשורש הבעיה — לא רק בהקלה זמנית.
+            רוב האנשים שמגיעים אליי כבר ניסו דברים שלא באמת פתרו את הבעיה.<br />
+            כאב שלא עובר, סטרס מתמשך או שינה לא מאוזנת.
           </p>
           <p>
-            השילוב בין דיקור סיני, תזונה וכלים טיפוליים נוספים<br />
-            מאפשר לגוף לחזור לאיזון בצורה טבעית ונכונה.
+            בקליניקה אני עובד בגישה אישית שמכוונת לשורש הבעיה —<br />
+            כדי להחזיר לגוף איזון, הקלה ואיכות חיים.
           </p>
-          <p>
-            הקליניקה ממוקמת במודיעין, ומלווה מטופלים בתהליכים<br />
-            של הקלה, איזון ושיפור איכות החיים.
-          </p>
+          <ul className="inline-flex flex-col items-center gap-2 mt-2">
+            {['דיקור סיני ורפואה סינית', 'התאמה אישית לכל מטופל', 'הסתכלות עמוקה על הגוף והנפש'].map((item) => (
+              <li key={item} className="flex items-center gap-2 text-stone-700 text-sm font-medium">
+                <span className="text-amber-600 font-bold">✔</span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </motion.div>
 
         {/* Testimonials placeholder */}
