@@ -12,40 +12,69 @@
     .wrap { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
     .back { display: inline-block; margin-bottom: 2rem; color: #b8943f; font-weight: 600; text-decoration: none; }
     .back:hover { text-decoration: underline; }
+    .back:focus-visible { outline: 2px solid #d97706; outline-offset: 3px; border-radius: 4px; }
     h1 { font-size: 2rem; color: #1a1a1a; margin-bottom: .5rem; }
-    .date { font-size: .85rem; color: #888; margin-bottom: 2.5rem; }
+    .date { font-size: .85rem; color: #555; margin-bottom: 2.5rem; }
     h2 { font-size: 1.15rem; font-weight: 700; color: #1a1a1a; margin: 2rem 0 .5rem; }
-    p { color: #555; margin-bottom: 1rem; }
-    a { color: #b8943f; }
+    p { color: #444; margin-bottom: 1rem; }
+    ul { margin: .5rem 0 1rem 1.5rem; color: #444; }
+    li { margin-bottom: .4rem; }
+    a { color: #92600a; }
+    a:focus-visible { outline: 2px solid #d97706; outline-offset: 3px; border-radius: 4px; }
+    .badge { display: inline-block; background: #fef3c7; color: #92600a; font-weight: 700; font-size: .8rem; padding: .25rem .75rem; border-radius: 999px; margin-bottom: 1.5rem; }
+    .issue-list { background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; padding: 1rem 1.5rem; margin-bottom: 1rem; }
+    .issue-list li { color: #555; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <a href="/" class="back">← חזרה לאתר</a>
+
     <h1>הצהרת נגישות</h1>
     <p class="date">עדכון אחרון: אפריל 2026</p>
 
     <h2>מחויבות לנגישות</h2>
-    <p>מרפאת רון סמרה מחויבת להנגשת האתר לאנשים עם מוגבלויות, בהתאם לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), תשע"ג-2013.</p>
+    <p>מרפאת רון סמרה מחויבת להנגשת האתר לאנשים עם מוגבלויות, בהתאם לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), תשע"ג-2013, ולתקן הישראלי SI 5568.</p>
 
-    <h2>רמת הנגישות</h2>
-    <p>אתר זה עומד ברמת AA של תקן WCAG 2.1 בחלקו. אנו ממשיכים לשפר את נגישות האתר.</p>
+    <h2>רמת הנגישות הנוכחית</h2>
+    <span class="badge">WCAG 2.0 AA — עמידה חלקית</span>
+    <p>האתר עומד ברמת AA של תקן WCAG 2.0 בחלקו. אנו ממשיכים לעבוד על שיפורים נוספים.</p>
 
-    <h2>תכונות נגישות באתר</h2>
-    <p>האתר כולל תפריט נגישות המאפשר:</p>
-    <ul style="margin: .5rem 0 1rem 1.5rem; color: #555;">
-      <li>הגדלת גודל הטקסט</li>
-      <li>ניגודיות גבוהה</li>
-      <li>גווני אפור</li>
-      <li>הדגשת קישורים</li>
-      <li>פונט קריא</li>
+    <h2>תכונות נגישות קיימות</h2>
+    <ul>
+      <li>תפריט נגישות — הגדלת טקסט, ניגודיות גבוהה, גווני אפור, הדגשת קישורים, פונט קריא</li>
+      <li>קישור "דלג לתוכן הראשי" — מופיע בלחיצה על Tab בתחילת הדף</li>
+      <li>תגיות alt תיאוריות לכל התמונות המשמעותיות</li>
+      <li>מבנה כותרות תקני H1→H2→H3 ללא דילוג רמות</li>
+      <li>ניווט מקלדת — כל האלמנטים האינטראקטיביים נגישים ב-Tab</li>
+      <li>מחוון פוקוס גלוי לכל אלמנטים אינטראקטיביים (מסגרת כתומה)</li>
+      <li>תמיכה מלאה בעברית RTL</li>
+      <li>תגיות ARIA — <code>aria-label</code>, <code>aria-expanded</code>, <code>aria-live</code> לתוכן דינמי</li>
+      <li>שימוש בתגיות סמנטיות: <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code></li>
+      <li>תגית <code>lang="he"</code> על אלמנט ה-HTML</li>
     </ul>
-    <p>כמו כן: תגיות alt לתמונות, ניווט מקלדת, תמיכה מלאה בעברית RTL.</p>
+
+    <h2>בעיות ידועות שטרם טופלו</h2>
+    <div class="issue-list">
+      <ul>
+        <li>ניגודיות צבע — חלק מטקסטים קטנים בצבע amber על רקע לבן עשויים להיות מתחת ליחס 4.5:1</li>
+        <li>תמונות תעודות — מתוארות בכותרת כללית; ייתכן שהפרטים המלאים אינם זמינים לקוראי מסך</li>
+        <li>גרסת נייד — לא נבדקה עם קוראי מסך לנייד (TalkBack / VoiceOver)</li>
+      </ul>
+    </div>
+
+    <h2>טכנולוגיות נתמכות</h2>
+    <p>האתר נבדק עם הדפדפנים הבאים: Chrome, Firefox, Edge. קורא מסך: NVDA + Chrome.</p>
 
     <h2>פנייה בנושא נגישות</h2>
-    <p>נתקלתם בבעיית נגישות? אשמח לשמוע:<br />
-    טלפון: <a href="tel:0523518103">052-351-8103</a><br />
-    WhatsApp: <a href="https://wa.me/972523518103">לחצו כאן</a></p>
+    <p>נתקלתם בבעיית נגישות? אנא פנו אלינו — נשתדל לטפל תוך 5 ימי עסקים:</p>
+    <ul>
+      <li>טלפון: <a href="tel:0523518103">052-351-8103</a></li>
+      <li>WhatsApp: <a href="https://wa.me/972523518103">שלחו הודעה בוואטסאפ</a></li>
+    </ul>
+
+    <h2>בסיס חוקי</h2>
+    <p>הצהרה זו הוכנה בהתאם לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), תשע"ג-2013, ולתקן הישראלי SI 5568.</p>
   </div>
 </body>
 </html>

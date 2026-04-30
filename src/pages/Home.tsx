@@ -72,7 +72,7 @@ function HeroSection() {
                 </a>
               </Button>
             </div>
-            <p className="mt-4 text-sm font-medium text-stone-500 text-center lg:text-start">מענה אישי, ללא התחייבות</p>
+            <p className="mt-4 text-sm font-medium text-stone-600 text-center lg:text-start">מענה אישי, ללא התחייבות</p>
           </motion.div>
 
           {/* Image */}
@@ -218,7 +218,12 @@ function WhyCarousel() {
 
   return (
     <div className="mt-8">
-      <div className="relative min-h-[130px] flex items-center justify-center">
+      <div
+        className="relative min-h-[130px] flex items-center justify-center"
+        aria-live="polite"
+        aria-atomic="true"
+        aria-label="ביקורות מטופלים"
+      >
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
@@ -443,7 +448,7 @@ function TestimonialsSection() {
           <h2 className="mt-3 text-4xl font-bold text-stone-900 md:text-5xl">מה המטופלים שלי אומרים</h2>
           <div className="mt-4 flex items-center justify-center gap-2">
             <span className="text-amber-400 text-base tracking-wide">★★★★★</span>
-            <span className="text-sm text-stone-400">Google Reviews</span>
+            <span className="text-sm text-stone-600">Google Reviews</span>
           </div>
         </motion.div>
 
@@ -465,7 +470,7 @@ function TestimonialsSection() {
                 </div>
                 <div>
                   <div className="text-sm font-bold text-stone-900">{t.author}</div>
-                  <div className="text-xs text-stone-400 mt-0.5">{t.context}</div>
+                  <div className="text-xs text-stone-500 mt-0.5">{t.context}</div>
                 </div>
               </div>
             </motion.li>
@@ -522,9 +527,11 @@ function FaqSection() {
           {acupuncturePoints.map((item, i) => (
             <li key={i} className="overflow-hidden rounded-2xl border border-stone-200 bg-white">
               <button
+                id={`faq-btn-${i}`}
                 onClick={() => setOpen(open === i ? null : i)}
                 className="flex w-full items-center justify-between gap-4 px-6 py-5 text-start font-semibold text-stone-900 hover:bg-stone-50/80 transition-colors"
                 aria-expanded={open === i}
+                aria-controls={`faq-panel-${i}`}
               >
                 <span className="text-sm md:text-base">{item.q}</span>
                 <ChevronDown
@@ -535,7 +542,12 @@ function FaqSection() {
                 />
               </button>
               {open === i && (
-                <div className="border-t border-stone-100 px-6 pb-5 pt-4 text-sm text-stone-600 leading-relaxed">
+                <div
+                  id={`faq-panel-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-btn-${i}`}
+                  className="border-t border-stone-100 px-6 pb-5 pt-4 text-sm text-stone-600 leading-relaxed"
+                >
                   {item.a}
                 </div>
               )}
@@ -544,7 +556,7 @@ function FaqSection() {
         </ul>
 
         <div className="mt-12 text-center">
-          <p className="mb-5 text-sm text-stone-400">רוצה לבדוק אם זה מתאים לך?</p>
+          <p className="mb-5 text-sm text-stone-600">רוצה לבדוק אם זה מתאים לך?</p>
           <Button
             asChild size="lg"
             className="rounded-2xl bg-gradient-to-l from-amber-600 to-amber-500 hover:from-amber-700 hover:to-amber-600 text-white border-0"

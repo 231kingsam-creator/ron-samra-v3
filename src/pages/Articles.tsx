@@ -89,7 +89,7 @@ export default function Articles() {
       </section>
 
       {/* Archive grid */}
-      <main className="py-16 bg-background">
+      <main id="main" className="py-16 bg-background">
         <div className="mx-auto max-w-6xl px-6">
           <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {pillars.map((p) => (

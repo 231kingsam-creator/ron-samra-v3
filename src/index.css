@@ -68,11 +68,17 @@
 @media (max-width: 768px) {
   .why-subtitle {
     font-size: 20px;
-    color: red;
     white-space: nowrap;
     overflow: visible;
     padding-inline: 0;
   }
+}
+
+/* ── Keyboard focus styles (WCAG 2.4.7) ─────────────────────── */
+:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* ── Hero mobile spacing refinements ────────────────────────── */
