@@ -68,6 +68,8 @@ export default function Articles() {
     <>
       <Header page="articles" />
 
+      <main id="main">
+
       {/* Page hero — dark, prominent */}
       <section className="bg-stone-900 pt-32 pb-20 text-center">
         <div className="mx-auto max-w-3xl px-6">
@@ -89,7 +91,7 @@ export default function Articles() {
       </section>
 
       {/* Archive grid */}
-      <main id="main" className="py-16 bg-background">
+      <div className="py-16 bg-background">
         <div className="mx-auto max-w-6xl px-6">
           <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {pillars.map((p) => (
@@ -132,7 +134,7 @@ export default function Articles() {
             ))}
           </ul>
         </div>
-      </main>
+      </div>
 
       {/* CTA */}
       <section className="py-20 bg-stone-900 text-center text-white">
@@ -159,6 +161,8 @@ export default function Articles() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer />
       <FloatingWhatsApp />

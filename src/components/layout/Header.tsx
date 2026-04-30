@@ -42,7 +42,7 @@ export function Header({ page = 'home' }: HeaderProps) {
 
   return (
     <header>
-      <nav className="fixed z-20 w-full px-2">
+      <nav aria-label="ניווט ראשי" className="fixed z-20 w-full px-2">
         <div
           className={cn(
             'mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12',
@@ -157,7 +157,8 @@ export function Header({ page = 'home' }: HeaderProps) {
         {/* Mobile drawer */}
         <AnimatePresence>
           {menuOpen && (
-            <motion.div
+            <motion.nav
+              aria-label="תפריט ניווט נייד"
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
@@ -241,7 +242,7 @@ export function Header({ page = 'home' }: HeaderProps) {
                   </a>
                 </Button>
               </div>
-            </motion.div>
+            </motion.nav>
           )}
         </AnimatePresence>
       </nav>
