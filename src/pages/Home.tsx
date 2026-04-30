@@ -30,7 +30,7 @@ const fadeUp = {
 ══════════════════════════════════════════════════════════════ */
 function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-stone-50">
+    <section id="main" className="relative flex min-h-screen items-center overflow-hidden bg-stone-50">
       {/* Ambient warm glow */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div style={{ background: 'radial-gradient(70% 80% at 80% 10%, #fef3c7 0%, transparent 65%)' }} className="absolute inset-0" />
@@ -58,8 +58,8 @@ function HeroSection() {
             <p className="mx-auto mt-6 max-w-lg text-xl font-light leading-relaxed text-stone-600 lg:mx-0">
               טיפול שמכוון לשורש הבעיה — לא רק להקלה זמנית
             </p>
-            <p className="mt-2 text-sm text-stone-400">רפואה סינית מדויקת ומסורתית במודיעין<br />עם ניסיון של מעל 35 שנה וליווי אישי לכל מטופל</p>
-            <p className="mt-1 text-sm text-stone-400">✔ 35+ שנות ניסיון · ✔ קליניקה במודיעין · ✔ מתאים גם אם ניסית טיפולים אחרים</p>
+            <p className="mt-2 text-sm text-stone-600">רפואה סינית מדויקת ומסורתית במודיעין<br />עם ניסיון של מעל 35 שנה וליווי אישי לכל מטופל</p>
+            <p className="mt-1 text-sm text-stone-600">✔ 35+ שנות ניסיון · ✔ קליניקה במודיעין · ✔ מתאים גם אם ניסית טיפולים אחרים</p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row justify-center lg:justify-start">
               <Button
@@ -841,9 +841,9 @@ export default function Home() {
         <AboutSection />
         <div className="mx-auto max-w-6xl px-6 pb-8">
           <div className="diplomas">
-            <img src="/images/diplomas/diploma1.jpg.jpeg" alt="תעודה 1" />
-            <img src="/images/diplomas/diploma2.jpg.jpeg" alt="תעודה 2" />
-            <img src="/images/diplomas/diploma3.jpg.jpeg" alt="תעודה 3" />
+            <img src="/images/diplomas/diploma1.jpg.jpeg" alt="תעודת הסמכה ברפואה סינית — I.C.O.M לונדון" />
+            <img src="/images/diplomas/diploma2.jpg.jpeg" alt="תעודת Lic. Ac ברפואה סינית" />
+            <img src="/images/diplomas/diploma3.jpg.jpeg" alt="תעודת BAc ברפואה סינית" />
           </div>
         </div>
         <TestimonialsSection />

@@ -85,9 +85,9 @@ export function Footer() {
             <a href="/accessibility.html" className="hover:text-amber-400 transition-colors">הצהרת נגישות</a>
             <a href="/disclaimer.html"    className="hover:text-amber-400 transition-colors">הצהרת אחריות רפואית</a>
           </div>
-          <div className="flex flex-col gap-2 text-xs text-stone-600 md:flex-row md:justify-between">
+          <div className="flex flex-col gap-2 text-xs text-stone-400 md:flex-row md:justify-between">
             <p>&copy; {year} רון סמרה. כל הזכויות שמורות. מודיעין מכבים רעות.</p>
-            <p className="text-stone-700 max-w-md">
+            <p className="text-stone-400 max-w-md">
               רון סמרה מחזיק בתעודת מטפל מוסמך ברפואה סינית BAc. Lic. Ac ואינו רופא MD.
               המידע באתר אינו מהווה המלצה רפואית. תוצאות הטיפול משתנות מאדם לאדם.
             </p>

@@ -107,7 +107,7 @@ export function Header({ page = 'home' }: HeaderProps) {
                   </a>
 
                   {/* Dropdown panel */}
-                  <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute top-full mt-2 end-0 min-w-[200px] rounded-2xl border border-border bg-card shadow-xl p-2 z-50">
+                  <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 absolute top-full mt-2 end-0 min-w-[200px] rounded-2xl border border-border bg-card shadow-xl p-2 z-50">
                     {articleSubItems.map((sub) => (
                       <a
                         key={sub.href}
