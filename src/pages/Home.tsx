@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { motion } from 'framer-motion'
-import { ChevronDown } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Header } from '../components/layout/Header'
 import { Footer } from '../components/layout/Footer'
 import { FloatingWhatsApp } from '../components/FloatingWhatsApp'
@@ -195,6 +195,83 @@ function TreatmentsSection() {
 /* ══════════════════════════════════════════════════════════════
    4. WHY CHOOSE / למה מטופלים בוחרים להגיע אליי
 ══════════════════════════════════════════════════════════════ */
+const whyTestimonials = [
+  { text: 'אני ישן כמעט לילה שלם בכל לילה, לאחר שנים של בעיות שינה חריפות.', author: 'אייל פרר', topic: 'בעיות שינה' },
+  { text: 'הייתי על סף ייאוש... אני אדם שעומד על הרגליים בזכותך.', author: 'עליזה דרעי', topic: 'כאבי גב' },
+  { text: 'לאחר קבלת 4 טיפולים בדיקור הכאב חלף לחלוטין — למרות שסבלתי ממנו בעקבות אירוע מוחי.', author: 'דב בן שטרית', topic: 'כאבי ראש' },
+  { text: 'נעלמו לי כל האלרגיות – כאילו מעולם לא היו – ורמת האנרגיה עלתה משמעותית.', author: 'אלי', topic: 'אלרגיה' },
+  { text: 'לאחר 6 חודשים של כישלונות בטיפולי פוריות — כבר בחודש הראשון אצל רון נקלטתי.', author: 'מיכל גתרון', topic: 'פריון' },
+  { text: 'הטיפול הביא להורדת מתח ולחץ רגשי המלווים אותי שנים רבות.', author: 'רונית הודק', topic: 'סטרס' },
+  { text: 'מדדי ה-TSH, ה-T3 וה-T4 שלי התאזנו וחזרו לנורמה — ללא טיפול תרופתי כלל.', author: 'רעות און', topic: 'בלוטת התריס' },
+]
+
+function WhyCarousel() {
+  const [current, setCurrent] = React.useState(0)
+  const total = whyTestimonials.length
+
+  React.useEffect(() => {
+    const t = setInterval(() => setCurrent(c => (c + 1) % total), 5000)
+    return () => clearInterval(t)
+  }, [total])
+
+  const item = whyTestimonials[current]
+
+  return (
+    <div className="mt-8">
+      <div className="relative min-h-[130px] flex items-center justify-center">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.35 }}
+            className="w-full"
+          >
+            <p className="text-stone-700 text-base leading-relaxed">״{item.text}״</p>
+            <div className="mt-4">
+              <p className="font-semibold text-stone-900 text-sm">{item.author}</p>
+              <span className="inline-block mt-1 rounded-full bg-amber-100 px-3 py-0.5 text-xs font-medium text-amber-700">{item.topic}</span>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      <div className="mt-6 flex items-center justify-center gap-3">
+        <button
+          onClick={() => setCurrent(c => (c - 1 + total) % total)}
+          className="p-1.5 rounded-full hover:bg-stone-200 transition-colors"
+          aria-label="הקודם"
+        >
+          <ChevronRight className="h-4 w-4 text-stone-400" />
+        </button>
+
+        <div className="flex gap-1.5">
+          {whyTestimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={cn(
+                'h-1.5 rounded-full transition-all duration-300',
+                i === current ? 'w-5 bg-amber-500' : 'w-1.5 bg-stone-300 hover:bg-stone-400'
+              )}
+              aria-label={`ביקורת ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={() => setCurrent(c => (c + 1) % total)}
+          className="p-1.5 rounded-full hover:bg-stone-200 transition-colors"
+          aria-label="הבא"
+        >
+          <ChevronLeft className="h-4 w-4 text-stone-400" />
+        </button>
+      </div>
+    </div>
+  )
+}
+
 function WhyChooseSection() {
   return (
     <section className="py-28 bg-white">
@@ -237,7 +314,7 @@ function WhyChooseSection() {
           </ul>
         </motion.div>
 
-        {/* Testimonials placeholder */}
+        {/* Testimonials carousel */}
         <motion.div
           variants={fadeUp} initial="hidden" whileInView="show"
           viewport={{ once: true, margin: '-60px' }}
@@ -246,9 +323,7 @@ function WhyChooseSection() {
         >
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-600">ביקורות</p>
           <h3 className="mt-2 text-2xl font-bold text-stone-900">מטופלים משתפים</h3>
-          <p className="mt-4 text-stone-400 text-sm">
-            בקרוב יתווספו כאן חוויות של מטופלים מהקליניקה.
-          </p>
+          <WhyCarousel />
         </motion.div>
 
       </div>
