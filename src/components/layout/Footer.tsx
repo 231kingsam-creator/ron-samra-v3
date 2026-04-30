@@ -14,18 +14,18 @@ export function Footer() {
             <div className="text-xs tracking-wider text-amber-400 mt-0.5 mb-3">
               רפואה סינית
             </div>
-            <p className="text-xs text-stone-500 leading-relaxed max-w-xs">
+            <p className="text-xs text-stone-400 leading-relaxed max-w-xs">
               BAc. Lic. Ac — I.C.O.M London<br />
               מודיעין מכבים רעות · ראשון–חמישי 09:00–19:00
             </p>
-            <p className="mt-3 text-xs text-stone-500">
+            <p className="mt-3 text-xs text-stone-400">
               מטפל מוסמך בכללית משלימה
             </p>
           </div>
 
           {/* Nav */}
           <nav aria-label="ניווט תחתון">
-            <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-3">ניווט</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-3">ניווט</p>
             <ul className="space-y-2 text-sm">
               {[
                 { label: 'אודות',        href: '#about' },
@@ -49,7 +49,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-3">יצירת קשר</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-3">יצירת קשר</p>
             <ul className="space-y-2 text-sm text-stone-400">
               <li>📍 מודיעין מכבים רעות</li>
               <li>📞 052-351-8103</li>
@@ -79,7 +79,7 @@ export function Footer() {
 
         <div className="mt-10 border-t border-white/10 pt-6 space-y-4">
           {/* Policy links */}
-          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-stone-500">
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-stone-400">
             <a href="/privacy.html"       className="hover:text-amber-400 transition-colors">מדיניות פרטיות</a>
             <a href="/terms.html"         className="hover:text-amber-400 transition-colors">תנאי שימוש</a>
             <a href="/accessibility.html" className="hover:text-amber-400 transition-colors">הצהרת נגישות</a>
